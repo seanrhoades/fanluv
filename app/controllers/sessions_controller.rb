@@ -12,11 +12,11 @@ class SessionsController < ApplicationController
                    try(:authenticate, params[:password])
      if @artist
        session[:artist_id] = @artist.id
-       redirect_to artist_path
+       redirect_to artists_path
 
      elsif @fan
          session[:fan_id] = @fan.id
-         redirect_to fan_path
+         redirect_to fans_path
          #fix this redirect_to
 
      else

@@ -1,10 +1,11 @@
 class LuvsController < ApplicationController
   before_action :set_luv, only: [:show, :edit, :update, :destroy]
+  before_action :require_logged_in
 
   # GET /luvs
   # GET /luvs.json
   def index
-    @luvs = Luv.all
+    @luvs = current_fan.luvs.all
   end
 
   # GET /luvs/1
@@ -14,7 +15,7 @@ class LuvsController < ApplicationController
 
   # GET /luvs/new
   def new
-    @luv = Luv.new
+    @luvs = current_fan.luvs.new
   end
 
   # GET /luvs/1/edit
@@ -24,7 +25,7 @@ class LuvsController < ApplicationController
   # POST /luvs
   # POST /luvs.json
   def create
-    @luv = Luv.new(luv_params)
+    @luv = current_fan.luvs.new(luv_params)
 
     respond_to do |format|
       if @luv.save
@@ -64,7 +65,7 @@ class LuvsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_luv
-      @luv = Luv.find(params[:id])
+      @luv = current_fan.luvs.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

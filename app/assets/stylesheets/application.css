@@ -12,4 +12,136 @@
  *
  *= require_tree .
  *= require_self
+
  */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background-color: #FF5A5A;
+  color: white;
+}
+
+.navbar-inner {
+    min-height: 0px;
+}
+
+.navbar-default .navbar-brand {
+  line-height: 150px;
+  height: 150px;
+  padding-top: 0;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 500%;
+}
+
+.navright li {
+  padding: 10px;
+  margin: 5px;
+  vertical-align: middle;
+  float: right;
+  line-height: 20px;
+  color:white;
+  font-size: 100%;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  line-height: 150px;
+  /*height: 150px;*/
+  letter-spacing: 4px;
+  color: white;
+}
+
+.container-full .brand {
+  line-height: 150px;
+  letter-spacing: 4px;
+  color: white;
+  font-size: 500%;
+}
+
+.social {
+  float: right;
+  color: white;
+  padding-top: 2.5em;
+}
+
+.social a {
+  color: #4A4A4A;
+  text-decoration: none
+}
+
+.social a:hover {
+  color: white;
+  text-decoration: none
+}
+
+.social, .container-full :hover {
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.artist-name {
+  z-index:2;
+  position:relative;
+  top:250px;
+  left:0px;
+  text-transform: uppercase;
+  font-size: 200%;
+  background-color: gainsboro;
+  text-align: center;
+  display:inline-block;
+  width: 250px;
+  height: 75px;
+  padding: 0.25em;
+  line-height: 1.1em;
+}
+
+.artist-title {
+  text-transform: uppercase;
+  font-size: 300%;
+  line-height: 1.1em;
+  padding-bottom: 1em;
+}
+
+.artist-detail {
+  text-transform:none;
+  font-size: 150%;
+  font-weight: 100;
+  line-height: 1.25em;
+  padding-bottom: 1em;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.music-link {
+  display: inline-block;
+  max-width: 140px;
+}
+
+.btn {
+  color: white;
+  text-transform: uppercase;
+  font-size: 150%;
+  background-color: #4A4A4A;
+  border-radius: 0;
+  border: none;
+  margin: 10px, 0px;
+}
+
+.btn:hover {
+  background-color: gainsboro;
+  color: black;
+}
+
+.form-horizontal .control-label {
+  padding-top: 7px;
+  margin-bottom: 0;
+  text-align: right;
+}

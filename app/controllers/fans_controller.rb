@@ -13,11 +13,11 @@ class FansController < ApplicationController
    end
   end
 
-   private 
+   private
    def fan_params
    params.
    require(:fan).
-   permit(:username, :password, :password_confirmation)
+   permit(:name, :email, :password, :password_confirmation)
    end
 
 end

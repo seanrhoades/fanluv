@@ -4,11 +4,11 @@ class SessionsController < ApplicationController
 
    def create
      @fan = Fan.
-                   find_by(username: params[:username])
+                   find_by(email: params[:email])
                    try(:authenticate, params[:password])
 
      @artist= Artist.
-                   find_by(username: params[:username])
+                   find_by(email: params[:email])
                    try(:authenticate, params[:password])
      if @artist
        session[:artist_id] = @artist.id

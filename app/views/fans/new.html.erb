@@ -1,8 +1,12 @@
 <h1>Fan Sign Up</h1>
 <%= form_for @fan do |f| %>
   <p>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
   </p>
   <p>
     <%= f.label :password %>

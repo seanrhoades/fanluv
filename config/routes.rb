@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :luvs
+  root to: 'sessions#new'
+  resource :sessions
+  resource :artists
+  resource :fans
+
+  # get 'sessions/new'
+  # get 'fans/new'
+  # get 'artists/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
    def new
    end
 
@@ -17,11 +18,18 @@ class SessionsController < ApplicationController
      elsif @fan
          session[:fan_id] = @fan.id
          redirect_to fans_path
-         #fix this redirect_to
 
      else
+       flash.now[:danger] = 'Invalid email/password combination'
        render action: 'new'
      end
    end
+
+   def destroy
+     session[:artist_id] = nil
+     session[:fan_id] = nil
+     redirect_to '/'
+   end
+
 
 end

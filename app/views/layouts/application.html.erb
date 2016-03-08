@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Fanluv</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Fanlove" %></title>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+
+    <%= javascript_include_tag "application" %>
+
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+
+        <a class="navbar-brand" href="#">FAN<i class="fa fa-heart"></i></a>
+          <ul class="nav navright text-right" style="padding-top:50px;">
+
+            <% if current_fan || current_artist %>
+            <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+            <% else %>
+            <li><%= link_to "Log In", login_path %></li>
+            <% end %>
+
+
+
+          </ul>
+      </div>
+    </div>
+
+
+      <%= yield %>
+
+  </body>
 </html>

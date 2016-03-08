@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_fans_path(@fan) %> |
+<p>
+  <strong>Name:</strong>
+  <%= @fan.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fan.email %>
+</p>
+
+<% if current_fan == @fan %>
+<td><%= link_to 'Edit', edit_fan_path(@fan) %></td>
+<td><%= link_to 'Delete', @fan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+
 <%= link_to 'Back', fans_path %>

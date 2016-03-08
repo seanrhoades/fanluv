@@ -63,6 +63,16 @@ body {
   font-size: 500%;
 }
 
+.flfooter {
+  line-height: 150px;
+  height: 150px;
+  padding: 0;
+  margin-left: 1em;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 100%;
+}
+
 .social {
   float: right;
   color: white;

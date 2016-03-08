@@ -12,10 +12,8 @@
  *
  *= require_tree .
  *= require_self
+
  */
-
-
-
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -32,7 +30,8 @@ body {
 .navbar-default .navbar-brand {
   line-height: 150px;
   height: 150px;
-  padding-top: 0;
+  padding: 0;
+  margin-left: 1em;
   color: white;
   letter-spacing: 4px;
   font-size: 500%;
@@ -40,12 +39,12 @@ body {
 
 .navright li {
   padding: 10px;
-  margin: 5px;
+  margin-right: 20px;
   vertical-align: middle;
   float: right;
   line-height: 20px;
   color:white;
-  font-size: 100%;
+  letter-spacing: normal;
 }
 
 .container-full {
@@ -137,6 +136,19 @@ body {
   margin: 10px, 0px;
 }
 
+.btn-more {
+  color: white;
+  text-transform: uppercase;
+  font-size: 150%;
+  background-color: #4A4A4A;
+  border-radius: 0;
+  border: none;
+  margin: 1em 0.75em;
+  padding: 20px;
+  text-align: center;
+  /*width: 200px;*/
+}
+
 .btn:hover {
   background-color: gainsboro;
   color: black;
@@ -146,4 +158,34 @@ body {
   padding-top: 7px;
   margin-bottom: 0;
   text-align: right;
+}
+
+.calbox {
+  height: 200px;
+  width: 100%;
+  background-color: gainsboro;
+  display: inline-block;
+  position: relative;
+  margin: 1em 1em 1em 2em;
+  color: #4A4A4A;
+  font-size: 150%
+  padding: 10px;
+  letter-spacing: normal;
+}
+
+.calbox {
+  height: 200px;
+  width: 100%;
+  background-color: gainsboro;
+  display: inline-block;
+  position: relative;
+  margin: 1em 1em 1em 2em;
+  color: #4A4A4A;
+  font-size: 150%
+  padding: 50px;
+  letter-spacing: normal;
+}
+.calbox:hover {
+  text-decoration: none;
+  background-color: inherit;
 }

@@ -23,6 +23,7 @@
       <% end %>
 
   </div>
+  <br>
 </div>
 
 <div class="container-full" style="background-color:#5AADFF">
@@ -33,7 +34,6 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-12">
 
       <% @artists.each do |artist| %>
 
@@ -46,19 +46,18 @@
 
       <% end %>
 
-    </div>
   </div>
+  <br>
 </div>
 
 <div class="container-full" style="background-color:#5AADFF">
   <div class="row">
-    <h2 style="text-align:center;color:white;line-height:100px;">LOVED ARTISTS</h2>
+    <h2 style="text-align:center;color:white;line-height:100px;">FRIENDS' LOVED ARTISTS</h2>
   </div>
 </div>
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-12">
 
       <% @artists.each do |artist| %>
 
@@ -71,14 +70,9 @@
 
       <% end %>
 
-    </div>
   </div>
+  <br>
 </div>
 
-
-
-
-
-<br>
 
 <%= link_to 'New Artist', new_artist_path %>

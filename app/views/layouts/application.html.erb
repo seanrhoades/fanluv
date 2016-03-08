@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title><%= content_for?(:title) ? yield(:title) : "Fanlove" %></title>
 
     <%= csrf_meta_tags %>
@@ -29,6 +27,7 @@
             <li><%= link_to "Log Out", logout_path, method: :delete, class: 'btn' %></li>
             <% else %>
             <li><%= link_to "Log In", login_path, class: 'btn' %></li>
+            <li><%= link_to "Sign Up", login_path, class: 'btn' %></li>
             <% end %>
 
           </ul>
@@ -47,9 +46,9 @@
           </div>
 
           <div class="col-xs-6 social">
-            <p style="text-align:right;margin-right:2em;"><a href="#">twitter <i class="fa fa-twitter"></i></a></p>
-            <p style="text-align:right;margin-right:2em;"><a href="#">facebook <i class="fa fa-facebook"></i></a></p>
-            <p style="text-align:right;margin-right:2em;"><a href="#">instagram <i class="fa fa-instagram"></i></a></p>
+            <p style="text-align:right;margin-right:4em;"><a href="#">twitter <i class="fa fa-twitter"></i></a></p>
+            <p style="text-align:right;margin-right:4em;"><a href="#">facebook <i class="fa fa-facebook"></i></a></p>
+            <p style="text-align:right;margin-right:4em;"><a href="#">instagram <i class="fa fa-instagram"></i></a></p>
           </div>
 
         </div>

@@ -18,6 +18,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin: 0px;
+}
+
 .navbar {
   background-color: #FF5A5A;
   color: white;

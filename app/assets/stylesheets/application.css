@@ -33,8 +33,9 @@ body {
   padding: 0;
   margin-left: 1em;
   color: white;
-  letter-spacing: 4px;
   font-size: 500%;
+  letter-spacing: 4px;
+
 }
 
 .navright li {
@@ -51,16 +52,22 @@ body {
   margin: 0 auto;
   width: 100%;
   line-height: 150px;
-  /*height: 150px;*/
-  letter-spacing: 4px;
   color: white;
 }
 
 .container-full .brand {
   line-height: 150px;
-  letter-spacing: 4px;
   color: white;
   font-size: 500%;
+  float: left;
+}
+
+.brand {
+  line-height: 150px;
+  color: white;
+  font-size: 500%;
+  float: left;
+  white-space: nowrap;
 }
 
 .flfooter {
@@ -69,8 +76,8 @@ body {
   padding: 0;
   margin-left: 1em;
   color: white;
-  letter-spacing: 4px;
   font-size: 100%;
+  letter-spacing: 4px;
 }
 
 .social {

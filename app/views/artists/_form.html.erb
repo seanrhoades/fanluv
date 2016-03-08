@@ -1,66 +1,17 @@
 <%= form_for(@artist) do |f| %>
-  <% if @artist.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+ <% if @artist.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
 
-      <ul>
-      <% @artist.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+     <ul>
+     <% @artist.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
 
-      <% provide(:title, 'Sign up') %>
-      <!-- <h1>Sign up</h1> -->
-
-      <form class="horizontal">
-        <%= form_for(@artist) do |f| %>
-
-          <div class="form-group">
-            <div class="col-xs-4 control-label">
-              <%= f.label :name %>
-            </div>
-            <div class="col-xs-8" style="margin-bottom:1em;">
-              <%= f.text_field :name, :class => "form-control" %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-xs-4 control-label">
-              <%= f.label :email %>
-            </div>
-            <div class="col-xs-8" style="margin-bottom:1em;">
-              <%= f.email_field :email, :class => "form-control" %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-xs-4 control-label">
-              <%= f.label :password %>
-            </div>
-            <div class="col-xs-8" style="margin-bottom:1em;">
-              <%= f.password_field :password, :class => "form-control" %>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-xs-4 control-label">
-              <%= f.label :password_confirmation, "Confirm password" %>
-            </div>
-            <div class="col-xs-8" style="margin-bottom:1em;">
-              <%= f.password_field :password_confirmation, :class => "form-control" %>
-            </div>
-          </div>
-
-          <div class="text-right" style="margin:1em;">
-
-            <%= f.submit "Create my account", class: "btn btn-primary" %>
-
-          </div>
-
-        <% end %>
-      </form>
-
-
-    <% end %>
+ <div class="actions">
+   <%= f.submit %>
+ </div>
+<% end %>

@@ -38,6 +38,11 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  def destroy
+    Artist.find(params[:id]).destroy
+    flash[:success] = "Artist deleted"
+    redirect_to root_url
+  end
 
    private
 

@@ -38,6 +38,12 @@ class FansController < ApplicationController
     @fan = Fan.find(params[:id])
   end
 
+  def destroy
+    Fan.find(params[:id]).destroy
+    flash[:success] = "Fan deleted"
+    redirect_to root_url
+  end
+
 
    private
 

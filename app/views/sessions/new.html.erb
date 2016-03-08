@@ -1,5 +1,8 @@
-<h1>Log in</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
 
+      <h1>Log in</h1>
 
 <%= form_tag sessions_path do %>
   <p>
@@ -13,6 +16,10 @@
   <p>
     <%= submit_tag 'Log in'  %>
   </p>
+
+</div>
+</div>
+</div>
 
 <h3>New to FanLuv?  <%= link_to 'Click Here!', new_fan_path %></h3>
 <% end %>

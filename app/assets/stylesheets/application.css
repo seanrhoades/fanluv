@@ -25,6 +25,7 @@ h2,
 h3,
 .h3 {
   margin: 0px;
+  line-height: 1.5;
 }
 
 .navbar {
@@ -50,7 +51,7 @@ h3,
 .navright li a {
   padding: 15px;
   margin-right: 20px;
-  margin-top: 60px;
+  margin-top: 50px;
   float: right;
   line-height: 20px;
   color: white;
@@ -214,4 +215,10 @@ h3,
 .calbox:hover {
   text-decoration: none;
   background-color: inherit;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  margin-top: 1em;
 }

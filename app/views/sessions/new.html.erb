@@ -1,25 +1,108 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-12">
 
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-xs-12 col-md-5">
+
+      <br>
       <h1>Log in</h1>
+      <hr>
 
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
-  </p>
-  <p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </p>
-  <p>
-    <%= submit_tag 'Log in'  %>
-  </p>
+      <%= form_tag sessions_path, html: {class: "horizontal"} do %>
 
-</div>
-</div>
-</div>
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= label_tag :email %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= text_field_tag :email, nil, :class => "form-control" %>
+          </div>
+        </div>
 
-<h3>New to FanLuv?  <%= link_to 'Click Here!', new_fan_path %></h3>
-<% end %>
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= label_tag :password %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= password_field_tag :password, nil, :class => "form-control" %>
+          </div>
+
+          <div class="text-right" style="margin:1em;">
+            <%= submit_tag 'Log in', class: "btn btn-primary"  %>
+          </div>
+        </div>
+
+      <% end %>
+
+    </div>
+
+    <div class="col-xs-12 col-md-5">
+
+      <br>
+      <h1>Or, create an account</h1>
+      <hr>
+
+      <%= form_for Fan.new, html: {class: "horizontal"} do |f| %>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <label>I am a:</label>
+          </div>
+          <div class="radio-inline" style="margin-left:1.5em;">
+            <input type="radio" name="userType" id="optionsRadios1" value="Fan" checked>
+            Fan
+          </div>
+          <div class="radio-inline">
+            <input type="radio" name="userType" id="optionsRadios2" value="Artist">
+            Artist
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :name %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.text_field :name, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :email %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.text_field :email, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :password %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.password_field :password, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :password_confirmation %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.password_field :password_confirmation, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="text-right" style="margin:1em;">
+          <%= f.submit "Create my account", class: "btn btn-primary" %>
+        </div>
+
+        <br><br>
+
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -19,6 +19,9 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
+# Adding Paperclip
+gem "paperclip", "~> 4.3"
+
 # Adding itunes Search API gem
 gem 'itunes-search-api'
 

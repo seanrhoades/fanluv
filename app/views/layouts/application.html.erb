@@ -21,7 +21,7 @@
       <div class="container-full">
 
         <a class="navbar-brand" href="/artists">FAN<i class="fa fa-heart"></i></a>
-          <ul class="nav navright text-right">
+          <ul class="nav navright">
 
             <% if current_fan || current_artist %>
             <li><%= link_to "Log Out", logout_path, method: :delete, class: 'btn' %></li>

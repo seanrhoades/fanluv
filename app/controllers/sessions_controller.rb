@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
      elsif @fan
          session[:fan_id] = @fan.id
-         redirect_to fans_path
+         redirect_to artists_path
 
      else
        flash.now[:danger] = 'Invalid email/password combination'

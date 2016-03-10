@@ -153,6 +153,13 @@ h3,
   max-width: 140px;
 }
 
+.venue {
+  font-size: 85%;
+  color: #505050;
+  padding-top: -0.25em;
+  margin-left: 1em;
+}
+
 .btn {
   color: white;
   text-transform: uppercase;

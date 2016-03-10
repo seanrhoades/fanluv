@@ -1,75 +1,19 @@
 class LuvsController < ApplicationController
-  before_action :set_luv, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in
-
-  # GET /luvs
-  # GET /luvs.json
-  def index
-    @luvs = current_fan.luvs.all
-  end
-
-  # GET /luvs/1
-  # GET /luvs/1.json
-  def show
-  end
-
-  # GET /luvs/new
-  def new
-    @luvs = current_fan.luvs.new
-  end
-
-  # GET /luvs/1/edit
-  def edit
-  end
-
-  # POST /luvs
-  # POST /luvs.json
   def create
-    @luv = current_fan.luvs.new(luv_params)
+    @artist = Artist.find(params[:luv][:luv])
+    fan_id = params[:luv][:luvs]
+    current_fan.create_luv(@artist, fan_id)
 
-    respond_to do |format|
-      if @luv.save
-        format.html { redirect_to @luv, notice: 'Luv was successfully created.' }
-        format.json { render :show, status: :created, location: @luv }
-      else
-        format.html { render :new }
-        format.json { render json: @luv.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to artist_path(@artist)
   end
 
-  # PATCH/PUT /luvs/1
-  # PATCH/PUT /luvs/1.json
-  def update
-    respond_to do |format|
-      if @luv.update(luv_params)
-        format.html { redirect_to @luv, notice: 'Luv was successfully updated.' }
-        format.json { render :show, status: :ok, location: @luv }
-      else
-        format.html { render :edit }
-        format.json { render json: @luv.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /luvs/1
-  # DELETE /luvs/1.json
   def destroy
-    @luv.destroy
-    respond_to do |format|
-      format.html { redirect_to luvs_url, notice: 'Luv was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @artist = Artist.find(params[:luv][:luv])
+    fan_id = params[:luv][:luvs]
+    current_fan.destroy_luv(@artist, fan_id)
+
+    redirect_to artist_path(@artist)
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_luv
-      @luv = current_fan.luvs.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def luv_params
-      params.fetch(:luv, {})
-    end
 end

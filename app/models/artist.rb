@@ -1,5 +1,7 @@
 class Artist < ActiveRecord::Base
-  has_many :fans, :through => :luvs
+  has_many :luvs
+  has_many :fans, through: :luvs
+
 
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 100 }

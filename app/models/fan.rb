@@ -1,5 +1,7 @@
 class Fan < ActiveRecord::Base
-  has_many :artists, :through => :luvs
+  has_many :luvs
+  has_many :artists, through: :luvs
+
 
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 100 }
@@ -16,4 +18,13 @@ class Fan < ActiveRecord::Base
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+def create_luv(artist, fan)
+  Luv.create(artist_id: artist.id, fan_id: fan)
+end
+
+def destroy_luv(artist, fan)
+  Luv.destroy(artist_id: artist.id, fan_id: fan)
+end
+
 end

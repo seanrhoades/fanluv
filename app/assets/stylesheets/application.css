@@ -74,7 +74,15 @@ p a:hover {
   margin: 0 auto;
   width: 100%;
   color: white;
-  padding-top: 1em;
+}
+
+.container-full subhead {
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+  padding: 0.5em;
+  background-color: #5AADFF;
+  /*line-height: 100px;*/
 }
 
 .brand {

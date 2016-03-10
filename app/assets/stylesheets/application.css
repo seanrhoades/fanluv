@@ -73,6 +73,15 @@ h3,
   white-space: nowrap;
 }
 
+.footer-mid {
+  /*margin: 1em;*/
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: normal;
+}
+
 .flfooter {
   background-color: #5AFFAD;
   min-height: 100px;

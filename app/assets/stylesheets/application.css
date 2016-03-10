@@ -199,7 +199,7 @@ p.venue a {
 }
 
 .merch {
-  margin: 1em;
+  margin-top: 1em;
 }
 
 .merch p {
@@ -215,6 +215,48 @@ p.venue a {
 p.filterby {
   font-size: 90%;
   color: #505050;
+}
+
+.news {
+  background-color: #ffac5a;
+  color: black;
+  height: 200px;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.note {
+  position: relative;
+  width: 100%;
+  padding: 1em 1.5em;
+  margin-top: 1em;
+  color: #black;
+  background: #ffac5a;
+  overflow: hidden;
+}
+
+.note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #fff #fff #ff860e #ff860e;
+  background: #ff860e;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+  /* Firefox 3.0 damage limitation */
+  display: inline-block; width: 0;
+}
+
+.note_rm {
+  color: black;
+  padding-top: -0.25em;
+  margin-left: 1em;
+  float: right;
+  padding: 0.5em;
 }
 
 .btn {

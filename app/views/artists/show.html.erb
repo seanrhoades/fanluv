@@ -7,21 +7,18 @@
     </div>
     <div class="col-xs-12 col-md-6">
       <div class="artist-title"><%= @artist.name %>
-        <p><h3>
-          <%= render 'luv_form' if current_fan %>
-        </h3></p>
+        <h3><%= render 'luv_form' if current_fan %></h3>
       </div>
+
       <p class="artist-detail">Brunch portland sartorial artisan typewriter. Sustainable cliche ennui ethical. Messenger bag artisan literally gastropub. Fingerstache leggings food truck gastropub pork belly pour-over williamsburg chicharrones authentic. Poutine cornhole affogato, before they sold out umami pabst yuccie ugh cronut selvage. Flexitarian before they sold out chambray locavore tattooed trust fund kogi. 8-bit letterpress retro heirloom chartreuse taxidermy.</p>
-
-
 
       <%= link_to image_tag("http://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg"), ItunesSearchController.search(@artist.name), alt: 'Search artist on Apple Music', margin: 0 %>
 
-        <p>
-				<% if current_artist == @artist %>
-				<td><%= link_to 'Edit', edit_artist_path(@artist) %></td>
-				<td><%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-				<% end %>
+      <p>
+			<% if current_artist == @artist %>
+			<td><%= link_to 'Edit', edit_artist_path(@artist) %></td>
+			<td><%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<% end %>
       </p>
     </div>
   </div>
@@ -90,9 +87,7 @@
       <h3>Detroit, MI</h3>
       <h4><a href="http://www.detroitlions.com/ford-field/">Ford Field</a></h4>
 
-      <div class="btn">
-        <p>Find Tickets</a>
-      </div>
+      <a class="btn ticket-btn" href="#">Find Tickets</a>
 
     </div>
 

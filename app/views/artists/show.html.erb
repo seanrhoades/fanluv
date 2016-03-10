@@ -5,8 +5,10 @@
     <div class="col-xs-12 col-md-6">
       <%= image_tag @artist.image_url, :class => "img-responsive" %>
     </div>
+
     <div class="col-xs-12 col-md-6">
-      <div class="artist-title"><%= @artist.name %>
+      <div class="artist-title">
+        <%= @artist.name %>
         <h3><%= render 'luv_form' if current_fan %></h3>
       </div>
 

@@ -34,6 +34,12 @@ h4 a:hover {
   background-color:inherit;
 }
 
+p a:hover {
+  text-decoration: none;
+  color: black;
+  background-color:inherit;
+}
+
 .navbar {
   background-color: #FF5A5A;
   color: white;
@@ -174,6 +180,10 @@ a.artist-name:hover {
   color: #505050;
   padding-top: -0.25em;
   margin-left: 1em;
+}
+
+p.venue a {
+  color: #5AADFF;
 }
 
 .btn {

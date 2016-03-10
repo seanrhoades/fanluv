@@ -7,6 +7,7 @@ class FansController < ApplicationController
 
   def new
     @fan = Fan.new
+
   end
 
   def edit
@@ -27,6 +28,7 @@ class FansController < ApplicationController
   def create
      @fan = Fan.new fan_params
      if @fan.save
+       session[:fan_id] = @fan.id
        redirect_to @fan, notice: "Welcome to FanLuv!"
      else
        flash.now[:danger] = 'Invalid email/password combination'

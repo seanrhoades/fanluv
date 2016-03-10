@@ -1,5 +1,4 @@
 class FansController < ApplicationController
-  # before_action :require_logged_in
 
   def index
     @fans = Fan.all

@@ -38,18 +38,20 @@
 
     <footer>
 
-      <div class="container-full" style="background-color:#5AFFAD">
+      <div class="container-full flfooter">
         <div class="row">
-          <div class="col-xs-6 brand">
-
-            <a class="flfooter" href="/artists">FAN<i class="fa fa-heart"></i></a>
-
+          <div class="col-md-4 col-xs-12 text-center">
+            <a class="brand" href="/">FAN<i class="fa fa-heart"></i></a>
           </div>
 
-          <div class="col-xs-6 social">
-            <p style="text-align:right;margin-right:4em;"><a href="#">twitter <i class="fa fa-twitter"></i></a></p>
-            <p style="text-align:right;margin-right:4em;"><a href="#">facebook <i class="fa fa-facebook"></i></a></p>
-            <p style="text-align:right;margin-right:4em;"><a href="#">instagram <i class="fa fa-instagram"></i></a></p>
+          <div class="col-md-4 col-xs-12 text-center">
+            <%= link_to 'Register as an Artist', new_artist_path %>
+          </div>
+
+          <div class="col-md-4 col-xs-12 social text-center">
+            <p><a href="#">twitter <i class="fa fa-twitter"></i></a></p>
+            <p><a href="#">facebook <i class="fa fa-facebook"></i></a></p>
+            <p><a href="#">instagram <i class="fa fa-instagram"></i></a></p>
           </div>
 
         </div>

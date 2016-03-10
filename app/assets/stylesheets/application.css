@@ -61,39 +61,30 @@ h3,
 .container-full {
   margin: 0 auto;
   width: 100%;
-  line-height: 150px;
   color: white;
-}
-
-.container-full .brand {
-  line-height: 150px;
-  color: white;
-  font-size: 500%;
-  float: left;
+  padding-top: 1em;
 }
 
 .brand {
-  line-height: 150px;
-  color: white;
-  font-size: 500%;
-  float: left;
+  font-size: 200%;
+  margin: 1em;
+  height: 100px;
+  line-height: 100px;
   white-space: nowrap;
 }
 
 .flfooter {
-  line-height: 150px;
-  height: 150px;
-  padding: 0;
-  margin-left: 1em;
+  background-color: #5AFFAD;
+  min-height: 100px;
   color: white;
   font-size: 100%;
   letter-spacing: 4px;
+  vertical-align: middle;
 }
 
 .social {
-  float: right;
   color: white;
-  padding-top: 2.5em;
+  padding: 2em;
 }
 
 .social a {

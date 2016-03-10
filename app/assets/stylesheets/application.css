@@ -208,6 +208,7 @@ p.venue a {
   color: white;
 }
 
+.btn a:focus,
 .btn a:hover {
   background-color: #eee;
   color: black;

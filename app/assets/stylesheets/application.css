@@ -167,23 +167,17 @@ h3,
   background-color: #4A4A4A;
   border-radius: 0;
   border: none;
-  margin: 10px, 0px;
 }
 
 .btn a {
   color: white;
-  text-transform: uppercase;
-  font-size: 150%;
-  background-color: #4A4A4A;
-  border-radius: 0;
-  border: none;
-  margin: 10px, 0px;
 }
 
-.btn:hover {
-  color: #333;
+/*.btn a:hover {
+  background-color: gainsboro;
+  color: black;
   text-decoration: none;
-}
+}*/
 
 .btn-more {
   color: white;
@@ -195,11 +189,6 @@ h3,
   margin: 1em 0.75em;
   padding: 20px;
   text-align: center;
-}
-
-.btn:hover {
-  background-color: gainsboro;
-  color: black;
 }
 
 .form-horizontal .control-label {

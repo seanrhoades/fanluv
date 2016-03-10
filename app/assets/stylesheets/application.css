@@ -78,6 +78,7 @@ p a:hover {
   color: white;
 }
 
+
 .container-full.subhead {
   margin-top: 1em;
   width: 100%;
@@ -197,6 +198,25 @@ p.venue a {
   color: #5AADFF;
 }
 
+.merch {
+  margin: 1em;
+}
+
+.merch p {
+  color: black;
+  font-size: 150%;
+  line-height: 2;
+}
+
+.merch p a {
+  color: #5AADFF;
+}
+
+p.filterby {
+  font-size: 90%;
+  color: #505050;
+}
+
 .btn {
   color: white;
   text-transform: uppercase;
@@ -277,7 +297,7 @@ input.btn:hover {
 }
 
 #map {
-  height: 300px;
+  height: 350px;
   width: 100%;
   margin-top: 1em;
 }

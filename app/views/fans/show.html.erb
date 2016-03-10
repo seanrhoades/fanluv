@@ -9,6 +9,10 @@
   <strong>Email:</strong>
   <%= @fan.email %>
 </p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @fan.image_url %>
+</p>
 
 <% if current_fan == @fan %>
 <td><%= link_to 'Edit', edit_fan_path(@fan) %></td>

@@ -48,20 +48,6 @@
 
         <div class="form-group">
           <div class="col-xs-4 control-label">
-            <label>I am a:</label>
-          </div>
-          <div class="radio-inline" style="margin-left:1.5em;">
-            <input type="radio" name="userType" id="optionsRadios1" value="Fan" checked>
-            Fan
-          </div>
-          <div class="radio-inline">
-            <input type="radio" name="userType" id="optionsRadios2" value="Artist">
-            Artist
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-4 control-label">
             <%= f.label :name %>
           </div>
           <div class="col-xs-8" style="margin-bottom:1em;">
@@ -101,7 +87,7 @@
         </div>
 
         <br><br>
-
+<h3>Want to be featured on FanLuv? <%= link_to 'Signup Here!', new_artist_path %>
       <% end %>
     </div>
   </div>

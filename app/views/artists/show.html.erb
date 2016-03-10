@@ -5,8 +5,10 @@
     <div class="col-xs-12 col-md-6">
       <%= image_tag @artist.image_url, :class => "img-responsive" %>
     </div>
+
     <div class="col-xs-12 col-md-6">
-      <div class="artist-title"><%= @artist.name %>
+      <div class="artist-title">
+        <%= @artist.name %>
         <h3><%= render 'luv_form' if current_fan %></h3>
       </div>
 
@@ -26,9 +28,9 @@
   </div>
 </div>
 
-<div class="container-full" style="background-color:#5AADFF;margin-top:1em;">
+<div class="container-full subhead">
   <div class="row">
-    <h2 style="text-align:center;color:white;line-height:100px;">ALBUMS</h2>
+    <h2>ALBUMS</h2>
   </div>
 </div>
 
@@ -60,9 +62,9 @@
 </div>
 
 
-<div class="container-full" style="background-color:#5AADFF;margin-top:1em;">
+<div class="container-full subhead">
   <div class="row">
-    <h2 style="text-align:center;color:white;line-height:100px;">TOUR DATES</h2>
+    <h2>TOUR DATES</h2>
   </div>
 </div>
 
@@ -112,15 +114,15 @@
   </div>
 </div>
 
-<div class="container-full" style="background-color:#5AADFF;margin-top:1em;">
+<div class="container-full subhead">
   <div class="row">
-    <h2 style="text-align:center;color:white;line-height:100px;">PRESS</h2>
+    <h2>PRESS</h2>
   </div>
 </div>
 
-<div class="container-full" style="background-color:#5AADFF;margin-top:1em;">
+<div class="container-full subhead">
   <div class="row">
-    <h2 style="text-align:center;color:white;line-height:100px;">FANS</h2>
+    <h2>FANS</h2>
   </div>
 </div>
 

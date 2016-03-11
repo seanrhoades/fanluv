@@ -24,9 +24,13 @@ h1,
 h2,
 .h2,
 h3,
-.h3 {
+.h3,
+h4,
+.h4 {
   margin: 0px;
   line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 h4 a:hover {
@@ -51,14 +55,17 @@ p a:hover {
 }
 
 .navbar-default .navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 4px;
+  word-spacing: 0em;
   line-height: 150px;
   height: 150px;
   padding: 0;
   margin-left: 1em;
   color: white;
-  font-size: 500%;
-  letter-spacing: 4px;
-
 }
 
 .navright li a {
@@ -78,13 +85,36 @@ p a:hover {
   color: white;
 }
 
-
 .container-full.subhead {
   margin-top: 2em;
   margin-bottom: 2em;
   width: 100%;
   color: white;
   padding: 1em;
+  background-color: #5AADFF;
+  text-align: center;
+}
+
+.container-full.subhead h2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+
+.container-full.subhead-home {
+  margin-top: 2em;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  color: white;
+  padding: 2em;
   background-color: #5AADFF;
   text-align: center;
 }
@@ -97,8 +127,25 @@ p a:hover {
   white-space: nowrap;
 }
 
+.trending {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+  background-color: #4A4A4A;
+  color: white;
+  margin: -20px -15px -20px -15px;
+  text-transform: uppercase;
+}
+
 .footer-mid {
-  /*margin: 1em;*/
+  font-size: 14px;
   height: 100px;
   line-height: 100px;
   white-space: nowrap;
@@ -107,21 +154,34 @@ p a:hover {
 }
 
 .flfooter {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   background-color: #5AFFAD;
   min-height: 100px;
   color: white;
   font-size: 100%;
   letter-spacing: 4px;
-  vertical-align: middle;
-  margin-top: 1em;
+  margin-top: -1.0em;
 }
 
 .social {
-  color: white;
-  padding: 2em;
+  padding-top: 3em;
+  padding-bottom: 2.5em;
 }
 
 .social a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   color: #4A4A4A;
   text-decoration: none
 }
@@ -144,9 +204,15 @@ p a:hover {
 }
 
 .artist-name {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  color: white;
   text-transform: uppercase;
-  font-size: 200%;
-  background-color: rgba(68, 67, 100, 0.5);
+  background-color: rgba(68, 67, 100, 0.6);
   text-align: center;
   display: inline-block;
   width: 100%;
@@ -167,28 +233,53 @@ a.artist-name {
 
 a.artist-name:hover {
   text-decoration: none;
+  background-color: rgba(68, 67, 100, 0.8);
 }
 
 .artist-title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   text-transform: uppercase;
   font-size: 300%;
   line-height: 1.1em;
   padding-bottom: 1em;
 }
 
-.artist-detail {
-  text-transform:none;
-  font-size: 150%;
-  font-weight: 100;
-  line-height: 1.25em;
+.artist-description {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   padding-bottom: 1em;
-  color: white;
+  color: black;
+}
+
+.tourdates {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: black;
 }
 
 .img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: 0;
 }
 
 .img-250 {
@@ -203,7 +294,15 @@ a.artist-name:hover {
 }
 
 .venue {
-  font-size: 85%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   color: #505050;
   padding-top: -0.25em;
   margin-left: 1em;
@@ -218,8 +317,14 @@ p.venue a {
 }
 
 .merch p {
-  color: black;
-  font-size: 150%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: #505050;
   line-height: 2;
 }
 
@@ -230,14 +335,6 @@ p.venue a {
 p.filterby {
   font-size: 90%;
   color: #505050;
-}
-
-.news {
-  background-color: #ffac5a;
-  color: black;
-  height: 200px;
-  width: 100%;
-  margin-top: 1em;
 }
 
 .note {
@@ -266,18 +363,54 @@ p.filterby {
   display: inline-block; width: 0;
 }
 
+.note h4 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: #505050;
+  margin-bottom: 1em;
+}
+
+.note p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: #505050;
+}
+
 .note_rm {
-  color: black;
   padding-top: -0.25em;
   margin-left: 1em;
   float: right;
   padding: 0.5em;
 }
 
+a.note_rm {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: black;
+}
+
 .btn {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   color: white;
   text-transform: uppercase;
-  font-size: 150%;
   background-color: #4A4A4A;
   border-radius: 0;
   border: none;
@@ -301,7 +434,15 @@ input.btn:hover {
 }
 
 .btn.ticket-btn {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   color: white;
+  text-transform: uppercase;
   background-color: #4A4A4A;
 }
 
@@ -312,49 +453,38 @@ input.btn:hover {
 }
 
 .btn-more {
-  color: white;
-  text-transform: uppercase;
-  font-size: 150%;
   background-color: #4A4A4A;
   border-radius: 0;
   border: none;
-  margin: 1em 0.75em;
+  margin: 1em .75em;
   padding: 20px;
   text-align: center;
 }
 
-.calbox {
-  height: 200px;
-  width: 100%;
-  background-color: gainsboro;
-  display: inline-block;
-  position: relative;
-  margin: 1em 1em 1em 2em;
-  color: #4A4A4A;
-  font-size: 150%
-  padding: 10px;
-  letter-spacing: normal;
-}
-
-.calbox {
-  height: 200px;
-  width: 100%;
-  background-color: gainsboro;
-  display: inline-block;
-  position: relative;
-  margin: 1em 1em 1em 2em;
-  color: #4A4A4A;
-  font-size: 150%
-  padding: 50px;
-  letter-spacing: normal;
-}
-.calbox:hover {
-  text-decoration: none;
-  background-color: inherit;
+p.btn-more {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: white;
+  text-transform: uppercase;
 }
 
 #map {
   height: 350px;
   width: 100%;
-  margin-top: 1em;
+}
+
+.control-label label {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: black;
 }

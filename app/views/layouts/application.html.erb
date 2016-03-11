@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Fanlove" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "FanLUV" %></title>
 
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "application" %>
 
   </head>
@@ -48,7 +48,7 @@
             <%= link_to 'Register as an Artist', new_artist_path %>
           </div>
 
-          <div class="col-md-4 col-xs-12 social text-center">
+          <div class="col-md-4 col-xs-12 text-center social">
             <p><a href="#">twitter <i class="fa fa-twitter"></i></a></p>
             <p><a href="#">facebook <i class="fa fa-facebook"></i></a></p>
             <p><a href="#">instagram <i class="fa fa-instagram"></i></a></p>

@@ -24,9 +24,12 @@ h1,
 h2,
 .h2,
 h3,
-.h3 {
+.h3,
+h4,
+.h4 {
   margin: 0px;
   line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
 }
 
 h4 a:hover {
@@ -176,13 +179,32 @@ a.artist-name:hover {
   padding-bottom: 1em;
 }
 
-.artist-detail {
-  text-transform:none;
-  font-size: 150%;
-  font-weight: 100;
-  line-height: 1.25em;
+.artist-description {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   padding-bottom: 1em;
-  color: white;
+  color: black;
+}
+
+.tourdates {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  /*padding-bottom: 1em;*/
+  color: black;
 }
 
 .img-responsive {
@@ -203,7 +225,15 @@ a.artist-name:hover {
 }
 
 .venue {
-  font-size: 85%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   color: #505050;
   padding-top: -0.25em;
   margin-left: 1em;
@@ -218,8 +248,14 @@ p.venue a {
 }
 
 .merch p {
-  color: black;
-  font-size: 150%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: #505050;
   line-height: 2;
 }
 
@@ -230,14 +266,6 @@ p.venue a {
 p.filterby {
   font-size: 90%;
   color: #505050;
-}
-
-.news {
-  background-color: #ffac5a;
-  color: black;
-  height: 200px;
-  width: 100%;
-  margin-top: 1em;
 }
 
 .note {
@@ -266,12 +294,42 @@ p.filterby {
   display: inline-block; width: 0;
 }
 
+.note h4 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: #505050;
+  margin-bottom: 1em;
+}
+
+.note p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: #505050;
+}
+
 .note_rm {
-  color: black;
   padding-top: -0.25em;
   margin-left: 1em;
   float: right;
   padding: 0.5em;
+}
+
+a.note_rm {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: black;
 }
 
 .btn {

@@ -85,7 +85,6 @@ p a:hover {
   color: white;
 }
 
-
 .container-full.subhead {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -109,6 +108,17 @@ p a:hover {
   white-space: nowrap;
 }
 
+.container-full.subhead-home {
+  margin-top: 2em;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  color: white;
+  padding: 2em;
+  background-color: #5AADFF;
+  text-align: center;
+}
+
 .brand {
   font-size: 200%;
   margin: 1em;
@@ -128,9 +138,10 @@ p a:hover {
   height: 100px;
   line-height: 100px;
   white-space: nowrap;
-  background-color: #ff8d8d;
+  background-color: #4A4A4A;
   color: white;
   margin: -20px -15px -20px -15px;
+  text-transform: uppercase;
 }
 
 .footer-mid {
@@ -155,8 +166,7 @@ p a:hover {
   color: white;
   font-size: 100%;
   letter-spacing: 4px;
-  vertical-align: middle;
-  margin-top: -1em;
+  margin-top: -1.0em;
 }
 
 .social {
@@ -262,7 +272,6 @@ a.artist-name:hover {
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
-  /*padding-bottom: 1em;*/
   color: black;
 }
 
@@ -270,6 +279,7 @@ a.artist-name:hover {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: 0;
 }
 
 .img-250 {
@@ -466,7 +476,6 @@ p.btn-more {
 #map {
   height: 350px;
   width: 100%;
-  margin-top: 1em;
 }
 
 .control-label label {

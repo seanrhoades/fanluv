@@ -55,14 +55,17 @@ p a:hover {
 }
 
 .navbar-default .navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 4px;
+  word-spacing: 0em;
   line-height: 150px;
   height: 150px;
   padding: 0;
   margin-left: 1em;
   color: white;
-  font-size: 500%;
-  letter-spacing: 4px;
-
 }
 
 .navright li a {
@@ -131,6 +134,7 @@ p a:hover {
 }
 
 .footer-mid {
+  font-size: 14px;
   height: 100px;
   line-height: 100px;
   white-space: nowrap;
@@ -146,7 +150,6 @@ p a:hover {
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
-
   background-color: #5AFFAD;
   min-height: 100px;
   color: white;
@@ -157,18 +160,18 @@ p a:hover {
 }
 
 .social {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 0em;
-  word-spacing: 0em;
-  line-height: 1.4;
-  color: white;
-  padding: 2em;
+  padding-top: 3em;
+  padding-bottom: 2.5em;
 }
 
 .social a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
   color: #4A4A4A;
   text-decoration: none
 }
@@ -191,9 +194,15 @@ p a:hover {
 }
 
 .artist-name {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  color: white;
   text-transform: uppercase;
-  font-size: 200%;
-  background-color: rgba(68, 67, 100, 0.5);
+  background-color: rgba(68, 67, 100, 0.6);
   text-align: center;
   display: inline-block;
   width: 100%;
@@ -214,6 +223,7 @@ a.artist-name {
 
 a.artist-name:hover {
   text-decoration: none;
+  background-color: rgba(68, 67, 100, 0.8);
 }
 
 .artist-title {
@@ -453,38 +463,19 @@ p.btn-more {
   text-transform: uppercase;
 }
 
-.calbox {
-  height: 200px;
-  width: 100%;
-  background-color: gainsboro;
-  display: inline-block;
-  position: relative;
-  margin: 1em 1em 1em 2em;
-  color: #4A4A4A;
-  font-size: 150%
-  padding: 10px;
-  letter-spacing: normal;
-}
-
-.calbox {
-  height: 200px;
-  width: 100%;
-  background-color: gainsboro;
-  display: inline-block;
-  position: relative;
-  margin: 1em 1em 1em 2em;
-  color: #4A4A4A;
-  font-size: 150%
-  padding: 50px;
-  letter-spacing: normal;
-}
-.calbox:hover {
-  text-decoration: none;
-  background-color: inherit;
-}
-
 #map {
   height: 350px;
   width: 100%;
   margin-top: 1em;
+}
+
+.control-label label {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: black;
 }

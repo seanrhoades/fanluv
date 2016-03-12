@@ -3,14 +3,17 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-xs-12 col-md-6">
-      <%= image_tag @artist.image_url, :class => "img-responsive", :style => "margin-bottom:1em;" %>
-    </div>
+      <div class="col-xs-12 col-md-6">
+        <%= image_tag @artist.image_url, :class => "img-responsive", :style => "margin-bottom:1em;" %>
+      </div>
 
-    <div class="col-xs-12 col-md-6">
-      <p class="artist-title"><%= @artist.name %></p>
+      <div class="col-xs-12 col-md-6 artist-title">
+        <%= @artist.name %>
+      </div>
 
-      <%= render 'luv_form' if current_fan %>
+      <div class="col-xs-6 col-md-6">
+        <h3><%= render 'luv_form' if current_fan %></h3>
+      </div>
 
       <p class="artist-description"><%= @artist.description %></p>
 
@@ -23,7 +26,6 @@
     		<% end %>
       </p>
 
-    </div>
   </div>
 </div>
 
@@ -52,12 +54,17 @@
       <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= @artist.album4image %>);background-size:cover;">
         <%= link_to @artist.album4title, "#{@artist.album4itunes}", :class => "artist-name force-to-bottom" %>
       </div>
+
     </div>
   </div>
-
-  <p class="btn-more"><a href="#">MORE <i class="fa fa-caret-square-o-right"></i></a></p>
-
 </div>
+
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <p class="btn-more"><a href="#">MORE <i class="fa fa-caret-square-o-right"></i></a></p>
+  </div>
+</div>
+
 
 <div class="container-full subhead">
   <div class="row">
@@ -133,10 +140,14 @@
     <div class="col-xs-6 col-md-3" style="padding-top:1em">
       <img class="img-responsive" src="https://dl.dropboxusercontent.com/u/1515/fanluv/merch/tshirt4.jpg">
     </div>
+
   </div>
+</div>
 
-  <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
-
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+  </div>
 </div>
 
 <div class="container-full subhead">
@@ -186,9 +197,14 @@
 
       </div>
     </div>
-  </div>
-  <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
 
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 

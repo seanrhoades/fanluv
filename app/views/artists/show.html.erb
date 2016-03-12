@@ -6,24 +6,26 @@
       <%= image_tag @artist.image_url, :class => "img-responsive" %>
     </div>
 
-    <div class="col-xs-12 col-md-6">
-      <div class="artist-title">
+    <div class="col-xs-10 col-md-5 artist-title">
         <%= @artist.name %>
-        <h3><%= render 'luv_form' if current_fan %></h3>
-      </div>
-
-      <p class="artist-description"><%= @artist.description %></p>
-
-      <%= link_to image_tag("http://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg"), ItunesSearchController.search(@artist.name), alt: 'Search artist on Apple Music', margin: 0 %>
-
-      <p>
-			<% if current_artist == @artist %>
-			<td><%= link_to 'Edit', edit_artist_path(@artist) %></td>
-			<td><%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			<% end %>
-      </p>
     </div>
+
+    <div class="col-xs-2 col-md-1">
+      <h3><%= render 'luv_form' if current_fan %></h3>
+    </div>
+
+    <p class="artist-description"><%= @artist.description %></p>
+
+    <%= link_to image_tag("http://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg"), ItunesSearchController.search(@artist.name), alt: 'Search artist on Apple Music', margin: 0 %>
+
+    <p>
+		<% if current_artist == @artist %>
+		<td><%= link_to 'Edit', edit_artist_path(@artist) %></td>
+		<td><%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<% end %>
+    </p>
   </div>
+</div>
 </div>
 
 <div class="container-full subhead">

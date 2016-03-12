@@ -2,28 +2,31 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <%= image_tag @artist.image_url, :class => "img-responsive" %>
-    </div>
+    <div class="col-xs-12 col-md-12">
 
-    <div class="col-xs-10 col-md-5 artist-title">
+      <div class="col-xs-12 col-md-6">
+        <%= image_tag @artist.image_url, :class => "img-responsive" %>
+      </div>
+
+      <div class="col-xs-12 col-md-6 artist-title">
         <%= @artist.name %>
+      </div>
+
+      <div class="col-xs-6 col-md-6">
+        <h3><%= render 'luv_form' if current_fan %></h3>
+      </div>
+
+      <p class="artist-description"><%= @artist.description %></p>
+
+      <p class="artist-description"><%= link_to image_tag("http://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg"), ItunesSearchController.search(@artist.name), alt: 'Search artist on Apple Music', margin: 0 %></p>
+
+      <p>
+    		<% if current_artist == @artist %>
+    		<%= link_to 'Edit', edit_artist_path(@artist) %>
+    		<%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure?' } %>
+    		<% end %>
+      </p>
     </div>
-
-    <div class="col-xs-2 col-md-1">
-      <h3><%= render 'luv_form' if current_fan %></h3>
-    </div>
-
-    <p class="artist-description"><%= @artist.description %></p>
-
-    <%= link_to image_tag("http://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg"), ItunesSearchController.search(@artist.name), alt: 'Search artist on Apple Music', margin: 0 %>
-
-    <p>
-		<% if current_artist == @artist %>
-		<td><%= link_to 'Edit', edit_artist_path(@artist) %></td>
-		<td><%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		<% end %>
-    </p>
   </div>
 </div>
 
@@ -59,7 +62,7 @@
 
 <div class="row">
   <div class="col-xs-12 col-md-12">
-    <p class="btn-more"><a href="#">MORE <i class="fa fa-caret-square-o-right"></i></i></a></p>
+    <p class="btn-more"><a href="#">MORE <i class="fa fa-caret-square-o-right"></i></a></p>
   </div>
 </div>
 
@@ -74,43 +77,42 @@
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <div id="map"></div>
-        <script>
-          var map;
-          function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: 42.361239, lng: -83.06701},
-              zoom: 8
-            });
-          }
-        </script>
-      </div>
+      <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 42.361239, lng: -83.06701},
+            zoom: 8
+          });
+        }
+      </script>
+    </div>
 
-      <div class="col-xs-12 col-md-4">
-        <h3>Next Stop</h3>
-        <hr>
-        <h4>April 9, 2016 / / Detroit, MI</h4>
 
-        <p class="tourdates"><a href="http://www.detroitlions.com/ford-field/">Ford Field</a></p>
+    <div class="col-xs-12 col-md-4">
+      <h3>Next Stop</h3>
+      <hr>
+      <h4>April 9, 2016 / / Detroit, MI</h4>
 
-        <a class="btn ticket-btn" href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a>
+      <p class="tourdates"><a href="http://www.detroitlions.com/ford-field/">Ford Field</a></p>
 
-      </div>
+      <a class="btn ticket-btn" href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a>
 
-      <div class="col-xs-12 col-md-4">
-        <h3>Upcoming Stops</h3>
-        <hr>
-        <p class="tourdates">March 26, 2016 / / Dubai, United Arab Emerates</P>
-        <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">March 30, 2016 / / Birmingham, United Kingdom</P>
-        <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">March 31, 2016 / / London, United Kingdom</P>
-        <p class="venue">The O2 | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">April 2, 2016 / / Dublin, Ireland</P>
-        <p class="venue">3Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">April 4, 2016 / / Glasgow, United Kingdom</P>
-        <p class="venue">The SSE Hydro | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
+    </div>
 
-      </div>
+    <div class="col-xs-12 col-md-4">
+      <h3>Upcoming Stops</h3>
+      <hr>
+      <p class="tourdates">March 26, 2016 / / Dubai, United Arab Emerates</P>
+      <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
+      <p class="tourdates">March 30, 2016 / / Birmingham, United Kingdom</P>
+      <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
+      <p class="tourdates">March 31, 2016 / / London, United Kingdom</P>
+      <p class="venue">The O2 | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
+      <p class="tourdates">April 2, 2016 / / Dublin, Ireland</P>
+      <p class="venue">3Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
+      <p class="tourdates">April 4, 2016 / / Glasgow, United Kingdom</P>
+      <p class="venue">The SSE Hydro | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
     </div>
   </div>
 </div>
@@ -219,7 +221,7 @@
 
       <% @artist.luvs.each do |luv| %>
       <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.fan.image_url %>);background-size:cover;">
-        <%= link_to luv.fan.name, luv.fan, :class => "fan-name force-to-bottom" %>
+        <%= link_to luv.fan.name, luv.fan, :class => "artist-name force-to-bottom" %>
       </div>
       <%end%>
 
@@ -227,14 +229,7 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-12 col-md-12">
-    <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
-  </div>
-</div>
-
 <br>
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJkhQiESw05ouG4NPsr1ByVjBs46KOBLw&callback=initMap"
 async defer></script>

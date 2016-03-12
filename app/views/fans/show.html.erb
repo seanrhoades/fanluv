@@ -2,48 +2,48 @@
 
 <div class="container-fluid">
   <div class="row">
+
     <div class="col-xs-12 col-md-6">
       <%= image_tag @fan.image_url, :class => "img-responsive", :style => "margin-bottom:1em;" %>
     </div>
 
-    <div class="col-xs-12 col-md-6">
-      <div class="artist-title">
-        <%= @fan.name %>
-      </div>
-      <h3>Luv'd Artists</h3>
+    <div class="col-xs-12 col-md-6 fan-name">
+      <%= @fan.name %>
     </div>
 
-    <!-- <div class="col-xs-4 col-md-3">
-      <div style="position:relative; z-index:1">
-      </div>
-    </div> -->
 
-    <% @fan.luvs.each do |luv| %>
-    <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
-      <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
-    </div>
-    <%end%>
 
-    <!-- <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>  -->
 
   </div>
 </div>
 
+<div class="container-full row subhead">
+  <h2>Luv'd Artists</h2>
+</div>
 
+<div class="container-full">
+  <div class="row">
+
+    <% @fan.luvs.each do |luv| %>
+      <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
+        <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
+      </div>
+    <%end%>
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="btn-more-artists">
+        <a href="/artists/">Find more artists <i class="fa fa-caret-square-o-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <% if current_fan == @fan %>
 <%= link_to 'Edit', edit_fan_path(@fan) %>
 <%= link_to 'Delete', @fan, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Find more Artists here', artists_path %>
 <% end %>

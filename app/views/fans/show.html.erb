@@ -9,8 +9,12 @@
 
     <div class="col-xs-12 col-md-6 fan-name">
       <%= @fan.name %>
-    </div>
 
+    <% if current_fan == @fan %>
+    <%= link_to 'Edit my profile', edit_fan_path(@fan), :class => "edit-my-profile" %>
+    <% end %>
+
+    </div>
   </div>
 </div>
 
@@ -18,15 +22,17 @@
   <h2>Luv'd Artists</h2>
 </div>
 
-<div class="container-full">
+<div class="container-fluid">
   <div class="row">
+    <div class="col-xs-12 col-md-12">
 
-    <% @fan.luvs.each do |luv| %>
-      <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
-        <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
-      </div>
-    <%end%>
+      <% @fan.luvs.each do |luv| %>
+        <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
+          <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
+        </div>
+      <%end%>
 
+    </div>
   </div>
 </div>
 
@@ -39,8 +45,3 @@
     </div>
   </div>
 </div>
-
-<% if current_fan == @fan %>
-<%= link_to 'Edit', edit_fan_path(@fan) %>
-<%= link_to 'Delete', @fan, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>

@@ -486,6 +486,18 @@ p.btn-more {
   text-transform: uppercase;
 }
 
+p.btn-more a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  color: white;
+  text-transform: uppercase;
+}
+
 #map {
   height: 350px;
   width: 100%;

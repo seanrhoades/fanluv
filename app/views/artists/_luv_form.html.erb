@@ -1,5 +1,5 @@
 <%= form_for(current_fan.luvs.new) do |f| %>
  <div><%= f.hidden_field :luv, value: @artist.id %></div>
  <div><%= f.hidden_field :luvs, value: current_fan.id %></div>
- <%= f.submit "♥", class: "btn luv_btn" %>
+ <%= f.submit "Give us some ♥", class: "btn luv_btn" %>
 <% end %>

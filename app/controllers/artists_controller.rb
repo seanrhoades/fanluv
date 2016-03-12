@@ -49,7 +49,7 @@ class ArtistsController < ApplicationController
    def artist_params
      params.
      require(:artist).
-     permit(:name, :email, :description, :image_url, :password, :password_confirmation)
+     permit(:name, :email, :description, :image_url, :password, :password_confirmation, :album1title, :album1image, :album1itunes, :album2title, :album2image, :album2itunes, :album3title, :album3image, :album3itunes, :album4title, :album4image, :album4itunes)
    end
 
 end

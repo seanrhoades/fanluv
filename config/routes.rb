@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :albums
   root to: 'sessions#new'
   resources :sessions
   resources :artists

@@ -217,13 +217,11 @@
   <div class="row">
     <div class="col-xs-12 col-md-12">
 
-
-      <% 12.times do %>
-
-      <div class="col-xs-3 col-md-2 fan-container" style="background:url(<%= @artist.image_url %>);background-size:cover;">
+      <% @artist.luvs.each do |luv| %>
+      <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.fan.image_url %>);background-size:cover;">
+        <%= link_to luv.fan.name, luv.fan, :class => "fan-name force-to-bottom" %>
       </div>
-
-      <% end %>
+      <%end%>
 
     </div>
   </div>

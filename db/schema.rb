@@ -11,15 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312032954) do
+ActiveRecord::Schema.define(version: 20160312174953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "albums", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "artists", force: :cascade do |t|
     t.string   "email"
@@ -29,6 +24,18 @@ ActiveRecord::Schema.define(version: 20160312032954) do
     t.string   "name"
     t.string   "image_url"
     t.string   "description"
+    t.string   "album1title"
+    t.string   "album1image"
+    t.string   "album1itunes"
+    t.string   "album2title"
+    t.string   "album2image"
+    t.string   "album2itunes"
+    t.string   "album3title"
+    t.string   "album3image"
+    t.string   "album3itunes"
+    t.string   "album4title"
+    t.string   "album4image"
+    t.string   "album4itunes"
   end
 
   add_index "artists", ["email"], name: "index_artists_on_email", unique: true, using: :btree

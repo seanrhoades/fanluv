@@ -1,32 +1,32 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_fan %>
+<div class="container-full subhead-home">
+  <div class="row">
+    <h2>LOVED ARTISTS</h2>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <% current_fan.luvs.each do |luv| %>
+    <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
+      <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
+    </div>
+    <%end%>
+
+  </div>
+  <br>
+</div>
+<% end %>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-md-12 text-center">
       <h2 class="trending">Trending Artists</h2>
       <br>
     </div>
-  </div>
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-
-      <% @artists.each do |artist| %>
-
-      <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= artist.image_url %>);background-size:cover;">
-        <%= link_to artist.name, artist, :class => "artist-name force-to-bottom" %>
-      </div>
-
-      <% end %>
-
-  </div>
-  <br>
-</div>
-
-<div class="container-full subhead-home">
-  <div class="row">
-    <h2>LOVED ARTISTS</h2>
   </div>
 </div>
 

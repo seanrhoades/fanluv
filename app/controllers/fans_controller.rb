@@ -51,7 +51,7 @@ class FansController < ApplicationController
    def fan_params
      params.
      require(:fan).
-     permit(:name, :email, :password, :password_confirmation, :image_url)
+     permit(:name, :email, :password, :password_conation, :image_url)
    end
 
 end

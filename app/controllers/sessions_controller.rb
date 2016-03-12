@@ -13,11 +13,11 @@ class SessionsController < ApplicationController
                    try(:authenticate, params[:password])
      if @artist
        session[:artist_id] = @artist.id
-       redirect_to artists_path
+       redirect_to current_artist
 
      elsif @fan
          session[:fan_id] = @fan.id
-         redirect_to artists_path
+         redirect_to current_fan
 
      else
        flash.now[:danger] = 'Invalid email/password combination'

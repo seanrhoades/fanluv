@@ -15,5 +15,9 @@ class LuvsController < ApplicationController
     redirect_to artist_path(@artist)
   end
 
+  def show
+  end
+
+
 
 end

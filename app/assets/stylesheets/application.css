@@ -311,17 +311,6 @@ a.artist-name:hover {
   margin: 0;
 }
 
-.img-250 {
-  display: block;
-  max-width: 250px;
-  height: auto;
-}
-
-.music-link {
-  display: inline-block;
-  max-width: 140px;
-}
-
 .venue {
   font-family: 'Roboto', sans-serif;
   font-style: normal;

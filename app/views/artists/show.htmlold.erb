@@ -37,27 +37,30 @@
   <div class="row">
     <!-- <div class="col-xs-12 col-md-12"> -->
 
-      <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= @artist.album1image %>);background-size:cover;">
-        <%= link_to @artist.album1image, @artist.album1itunes, :class => "artist-name force-to-bottom" %>
-      </div>
+            <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= artist.album1image %>);background-size:cover;">
+              <%= link_to artist.album1image, artist.album1itunes, :class => "artist-name force-to-bottom" %>
+            </div>
 
-      <!-- ### Old placeholder album content ###
+            <% end %>
 
-      <%# 4.times do %>
+
+<!-- ### Old placeholder album content ###
+
+      <% 4.times do %>
 
       <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= @artist.image_url %>);background-size:cover;">
       </div>
 
-      <%# end %> -->
+      <% end %> -->
     <!-- </div> -->
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-12 col-md-12">
-    <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+    </div>
   </div>
-</div>
 
 
 <div class="container-full subhead">
@@ -70,43 +73,42 @@
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <div id="map"></div>
-        <script>
-          var map;
-          function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: 42.361239, lng: -83.06701},
-              zoom: 8
-            });
-          }
-        </script>
-      </div>
+      <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 42.361239, lng: -83.06701},
+            zoom: 8
+          });
+        }
+      </script>
+    </div>
 
-      <div class="col-xs-12 col-md-4">
-        <h3>Next Stop</h3>
-        <hr>
-        <h4>April 9, 2016 / / Detroit, MI</h4>
+    <div class="col-xs-12 col-md-4">
+      <h3>Next Stop</h3>
+      <hr>
+      <h4>April 9, 2016 / / Detroit, MI</h4>
 
-        <p class="tourdates"><a href="http://www.detroitlions.com/ford-field/">Ford Field</a></p>
+      <p class="tourdates"><a href="http://www.detroitlions.com/ford-field/">Ford Field</a></p>
 
-        <a class="btn ticket-btn" href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a>
+      <a class="btn ticket-btn" href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a>
 
-      </div>
+    </div>
 
-      <div class="col-xs-12 col-md-4">
-        <h3>Upcoming Stops</h3>
-        <hr>
-        <p class="tourdates">March 26, 2016 / / Dubai, United Arab Emerates</P>
+    <div class="col-xs-12 col-md-4" >
+      <h3>Upcoming Stops</h3>
+      <hr>
+      <p class="tourdates">March 26, 2016 / / Dubai, United Arab Emerates</P>
         <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">March 30, 2016 / / Birmingham, United Kingdom</P>
+      <p class="tourdates">March 30, 2016 / / Birmingham, United Kingdom</P>
         <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">March 31, 2016 / / London, United Kingdom</P>
+      <p class="tourdates">March 31, 2016 / / London, United Kingdom</P>
         <p class="venue">The O2 | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">April 2, 2016 / / Dublin, Ireland</P>
+      <p class="tourdates">April 2, 2016 / / Dublin, Ireland</P>
         <p class="venue">3Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
-        <p class="tourdates">April 4, 2016 / / Glasgow, United Kingdom</P>
+      <p class="tourdates">April 4, 2016 / / Glasgow, United Kingdom</P>
         <p class="venue">The SSE Hydro | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a></p>
 
-      </div>
     </div>
   </div>
 </div>
@@ -225,13 +227,13 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-12 col-md-12">
-    <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+    </div>
   </div>
-</div>
 
-<br>
+  <br>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJkhQiESw05ouG4NPsr1ByVjBs46KOBLw&callback=initMap"

@@ -1,0 +1,5 @@
+  <% if current_fan.luvs @artist %>
+    <%= render 'unluv_form' %>
+  <% else %>
+    <%= render 'luv_form' %>
+  <% end %>

@@ -108,7 +108,7 @@ p a:hover {
 }
 
 .container-full.subhead-home {
-  margin-top: -2em;
+  margin-top: -2.5em;
   height: 100px;
   line-height: 100px;
   width: 100%;
@@ -142,7 +142,7 @@ a.brand {
   white-space: nowrap;
   background-color: #4A4A4A;
   color: white;
-  margin: -35px -15px -20px -15px;
+  margin: -30px -15px -20px -15px;
   text-transform: uppercase;
 }
 

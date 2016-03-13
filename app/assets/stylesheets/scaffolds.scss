@@ -38,7 +38,13 @@ div {
 }
 
 #notice {
-  color: green;
+  color: red;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  margin: 32px;
 }
 
 .field_with_errors {

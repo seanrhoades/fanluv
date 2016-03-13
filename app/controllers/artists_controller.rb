@@ -27,7 +27,7 @@ class ArtistsController < ApplicationController
      @artist = Artist.new artist_params
      if @artist.save
        session[:artist_id] = @artist.id
-       redirect_to @artist, notice: "Welcome to FanLuv!"
+       redirect_to @artist, notice: "WELCOME TO FANLUV!"
      else
        flash.now[:danger] = 'Invalid email/password combination'
        render action: 'new'

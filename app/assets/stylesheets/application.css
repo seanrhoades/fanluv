@@ -218,6 +218,7 @@ a.brand {
   height: 75px;
   line-height: 1.1em;
   padding: 0.25em;
+  overflow: hidden;
 }
 
 .artist-container {

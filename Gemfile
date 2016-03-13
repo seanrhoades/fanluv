@@ -22,7 +22,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
-# Adding itunes Search API gem
+# Adding iTunes Search API gem
 gem 'itunes-search-api'
 
 # Use jquery as the JavaScript library

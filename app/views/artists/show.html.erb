@@ -11,14 +11,12 @@
       <p class="artist-title"><%= @artist.name %></p>
 
       <% if current_fan %>
-        <% if current_fan.luvs?(@artist)%>
+        <% if current_fan.luvs?(@artist) %>
           <%= render 'unluv_form' %>
         <% else %>
           <%= render 'luv_form' %>
         <%end%>
       <%end%>
-
-
 
       <p class="artist-description"><%= @artist.description %></p>
 
@@ -137,7 +135,6 @@
 <% end %>
 
 
-  <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
 
 </div>
 
@@ -161,7 +158,7 @@
           <li>A Ton Of New Stickers</li>
           <li>Gnarly Coaster Set</li>
         </ul><br>
-          <p>Hurry to the store before they're all snatched up!</p>
+        <p>Hurry to the store before they're all snatched up!</p>
 
         <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
 
@@ -171,8 +168,9 @@
     <div class="col-xs-6 col-md-3">
       <div class="note">
 
-        <h4>Pitchfork reviews the latest album:</h4>
-        <p>Wayfarers distillery shoreditch craft beer, forage kinfolk  post-ironic fashion axe food truck helvetica offal. Next level health goth shoreditch normcore cold-pressed street art, godard whatever tofu 3 wolf moon wolf plaid everyday carry freegan you probably haven't heard of them. Bitters hoodie beard, selfies poutine tacos pug thundercats. Pabst you probably haven't heard of them ... </p>
+        <h4>Brunch aesthetic next level banjo</h4>
+        <p>Aesthetic bitters sustainable green juice. Artisan kogi vinyl banjo quinoa forage franzen kinfolk ethical try-hard, you probably haven't heard of them put a bird on it gastropub before they sold out. </p>
+
         <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
 
       </div>
@@ -181,8 +179,9 @@
     <div class="col-xs-6 col-md-3">
       <div class="note">
 
-        <h4>An update from the road:</h4>
-        <p>Yuccie hammock YOLO pitchfork, ramps cray whatever. Brunch intelligentsia twee pug hammock, bitters beard church-key selfies banjo. You probably haven't heard of them semiotics helvetica yuccie quinoa selvage, hella portland. man braid hashtag keffiyeh, cronut flannel literally. Man braid gastropub marfa street art, semiotics williamsburg crucifix retro +1 lomo cred ...</p>
+        <h4>Messenger bag umami crucifix biodiesel</h4>
+        <p>Four dollar toast disrupt cold-pressed bespoke. Gochujang franzen tilde, gluten-free pop-up food truck sustainable asymmetrical shoreditch lo-fi try-hard trust fund biodiesel church-key raw denim. Meh beard jean shorts, gastropub quinoa viral heirloom.</p>
+
         <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
 
       </div>
@@ -191,15 +190,16 @@
     <div class="col-xs-6 col-md-3">
       <div class="note">
 
-        <h4>Fan-only US tour presale tickets up soon:</h4>
-        <p>Fap dreamcatcher messenger bag wolf drinking vinegar vinyl, sartorial viral plaid keffiyeh kale chips forage bushwick poutine. Authentic you probably haven't heard of them health goth echo park post-ironic. Venmo master cleanse stumptown, sartorial freegan austin fap. Williamsburg godard wayfarers fingerstache. Williamsburg bicycle rights raw denim brooklyn.</p>
+        <h4>Keytar four loko tofu </h4>
+        <p>Celiac cronut tattooed selfies, gastropub photo booth fashion axe forage tacos gentrify tote bag ramps chia. Venmo intelligentsia street art taxidermy, readymade health goth microdosing plaid forage cliche.</p>
+
         <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
 
       </div>
     </div>
   </div>
 
-  <p class="btn-more" href="#">MORE <i class="fa fa-chevron-circle-down"></i></p>
+  <p class="btn-more"><a href="#">MORE <i class="fa fa-chevron-circle-down"></i></a></p>
 
 </div>
 

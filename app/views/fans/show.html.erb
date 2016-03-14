@@ -9,38 +9,66 @@
     <div class="col-xs-12 col-md-6">
       <div class="artist-title">
         <%= @fan.name %>
+        <% if current_fan == @fan %>
+          <%= link_to 'Edit my profile', edit_fan_path(@fan), :class => "profile-edit", :style => "float:right" %> <br>
+          <%= link_to 'My Shopping Cart', cart_path, :class => "profile-edit", :style => "float:right" %>
+          <br>
+          <%= link_to 'Delete my account', @fan, :class => "profile-edit", :style => "float:right", method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </div>
-      <h3>Luv'd Artists</h3>
-    </div>
 
+      <% unless @fan.location == "" %>
+        <p class="profile-subhead">Location</p><br>
+        <p class="profile-copy"><%= @fan.location %></p><br>
+      <% end %>
 
-    <% @fan.luvs.each do |luv| %>
-    <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
-      <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
-    </div>
-    <%end%>
+      <% unless @fan.facebook == "" %>
+        <p class="profile-subhead">Facebook</p><br>
+        <%= link_to "#{@fan.facebook}", "#{@fan.facebook}", :class => "profile-copy" %><br><br>
+      <% end %>
 
-    <!-- <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>  -->
+      <% unless @fan.twitter == "" %>
+        <p class="profile-subhead">Twitter</p><br>
+        <%= link_to "#{@fan.twitter}", "#{@fan.twitter}", :class => "profile-copy" %><br><br>
+      <% end %>
 
+      <% unless @fan.lastfm == "" %>
+        <p class="profile-subhead">LastFM</p><br>
+        <%= link_to "#{@fan.lastfm}", "#{@fan.lastfm}", :class => "profile-copy" %><br><br>
+      <% end %>
+
+      <% unless @fan.bio == "" %>
+        <p class="profile-subhead">Bio</p><br>
+        <p class="profile-copy"><%= @fan.bio %></p><br>
+      <% end %>
+
+    </div>
   </div>
 </div>
 
+<div class="container-full subhead">
+  <div class="row">
+    <h2>Luv'd Artists</h2>
+  </div>
+</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
 
-<% if current_fan == @fan %>
-<%= link_to 'Edit', edit_fan_path(@fan) %>
-<%= link_to 'Delete', @fan, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Find more Artists here', artists_path %>
-<%= link_to 'Your Shopping Cart', cart_path %>
-<% end %>
+      <% @fan.luvs.each do |luv| %>
+
+        <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
+          <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
+        </div>
+
+      <%end%>
+
+      <%= link_to 'Find more Artists', artists_path, :class => "btn btn-more-artists" %>
+
+      <br>
+      <br>
+
+    </div>
+  </div>
+</div>

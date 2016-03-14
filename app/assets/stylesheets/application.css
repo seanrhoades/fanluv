@@ -406,7 +406,6 @@ p.filterby {
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
-  color: #505050;
 }
 
 .note_rm {
@@ -532,6 +531,14 @@ a.btn-more {
   color: white;
   text-transform: uppercase;
 }
+
+ul.news {
+  margin: 0px;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
 
 p.btn-more a {
   font-family: 'Roboto', sans-serif;

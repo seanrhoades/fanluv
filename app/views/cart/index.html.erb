@@ -1,5 +1,10 @@
 <h1>Your Cart</h1>
+
+<% if @cart.empty? %>
+	<p>Your cart is currently empty</p>
+<% else %>
 <%= link_to "Empty Cart", cart_clear_path %>
+<% end %>
 <br><br><br>
 
 <% total = 0 %>
@@ -19,3 +24,5 @@
 
 <p><b><%= number_to_currency(total, :unit => '$') %></b></p>
 </ul>
+
+<%= image_tag("checkout-logo-medium.png")%>

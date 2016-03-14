@@ -10,7 +10,10 @@
     <div class="col-xs-12 col-md-6">
       <p class="artist-title"><%= @artist.name %></p>
 
-      <%= render 'luv_form' if current_fan %>
+
+
+      <%= render 'luv_form' if current_fan && !current_fan.luvs(@artist.id)%>
+
 
       <p class="artist-description"><%= @artist.description %></p>
 

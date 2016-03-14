@@ -1,6 +1,7 @@
 class Fan < ActiveRecord::Base
-  has_many :luvs
+  has_many :luvs, dependent: :destroy
   has_many :artists, through: :luvs
+
 
 
   before_save { self.email = email.downcase }

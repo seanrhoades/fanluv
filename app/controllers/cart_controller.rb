@@ -2,6 +2,7 @@ class CartController < ApplicationController
 
   def add
     id = params[:id]
+    p session
     # if the cart has already been created, use the existing cart
     if session[:cart] then
       cart = session[:cart]
@@ -28,6 +29,14 @@ class CartController < ApplicationController
     else
       @cart = {}
     end
+  end
+
+  private
+
+  def cart_params
+    params.
+    require(:cart).
+    permit(:title, :description, :image_url, :price)
   end
 
 end

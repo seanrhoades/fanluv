@@ -27,10 +27,9 @@ class Fan < ActiveRecord::Base
     Luv.destroy(artist_id: artist.id, fan_id: fan)
   end
 
-  # def luvs(artist, fan)
-  #   return true if Luv.where(fan_id: current_fan, artist_id: artist_id).blank?
-  #   false
-  # end
+  def luvs?(artist)
+    Luv.exists?(fan:self, artist:artist)
+  end
 
 
 end

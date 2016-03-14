@@ -9,38 +9,35 @@
     <div class="col-xs-12 col-md-6">
       <div class="artist-title">
         <%= @fan.name %>
+        <%= link_to 'Edit my profile', edit_fan_path(@fan), :class => "edit-my-profile" %> <br>
+        <%= link_to 'My Shopping Cart', cart_path, :class => "edit-my-profile" %>
       </div>
-      <h3>Luv'd Artists</h3>
     </div>
+  </div>
+</div>
 
+<div class="container-full subhead">
+  <div class="row">
+    <h2>Luv'd Artists</h2>
+  </div>
+</div>
 
-    <% @fan.luvs.each do |luv| %>
-    <div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
-      <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
-    </div>
-    <%end%>
+<% @fan.luvs.each do |luv| %>
 
-    <!-- <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>
-    <div class="col-xs-4 col-md-3" style="padding-top:1em">
-      <img class="img-responsive" src="http://placehold.it/1000x1000">
-    </div>  -->
+<div class="col-xs-6 col-md-3 artist-container" style="background:url(<%= luv.artist.image_url %>);background-size:cover;">
+  <%= link_to luv.artist.name, luv.artist, :class => "artist-name force-to-bottom" %>
+</div>
 
+<%end%>
+
+<div class="container-fluid">
+  <div class="row">
+    <%= link_to 'Find more Artists here', artists_path, :class => "btn btn-more-artists" %>
   </div>
 </div>
 
 
 
 <% if current_fan == @fan %>
-<%= link_to 'Edit', edit_fan_path(@fan) %>
 <%= link_to 'Delete', @fan, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Find more Artists here', artists_path %>
-<%= link_to 'Your Shopping Cart', cart_path %>
 <% end %>

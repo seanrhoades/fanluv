@@ -218,7 +218,7 @@ a.brand {
   width: 100%;
   height: 75px;
   line-height: 1.1em;
-  padding: 0.25em;
+  padding: 0.25em;rail
   overflow: hidden;
 }
 
@@ -254,8 +254,19 @@ a.brand {
   float:right;
 }
 
+.edit-my-profile {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  display: inline-block;
+  line-height: 1.1em;
+  float:right;
+}
+
 a.artist-name {
   color: white;
+  overflow:hidden;
 }
 
 a.artist-name:hover {

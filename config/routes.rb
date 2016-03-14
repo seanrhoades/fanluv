@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/cart' => 'cart#index'
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'
+  # get '/cart/:id' => 'cart#add', as: 'fans_cart'
 
   root to: 'sessions#new'
   resources :sessions

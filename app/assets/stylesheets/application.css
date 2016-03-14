@@ -72,10 +72,9 @@ p a:hover {
   padding: 15px;
   margin-right: 20px;
   margin-top: 50px;
+  margin-bottom: 20px;
   float: right;
-  line-height: 20px;
   color: white;
-  letter-spacing: 1px;
 }
 
 .container-full {
@@ -109,7 +108,7 @@ p a:hover {
 }
 
 .container-full.subhead-home {
-  margin-top: -2em;
+  margin-top: -2.5em;
   height: 100px;
   line-height: 100px;
   width: 100%;
@@ -120,11 +119,14 @@ p a:hover {
 }
 
 .brand {
-  font-size: 200%;
-  margin: 1em;
-  height: 100px;
-  line-height: 100px;
+  margin-bottom: 1em;
+  font-size: 24px;
+}
+
+a.brand {
   white-space: nowrap;
+  letter-spacing: 4px;
+  color: #4A4A4A;
 }
 
 .trending {
@@ -140,18 +142,18 @@ p a:hover {
   white-space: nowrap;
   background-color: #4A4A4A;
   color: white;
-  margin: -20px -15px -20px -15px;
+  margin: -30px -15px -20px -15px;
   text-transform: uppercase;
 }
 
 .footer-mid {
   font-size: 14px;
-  height: 100px;
-  line-height: 100px;
+  line-height: 1.4;
+  color: #4A4A4A;
   white-space: nowrap;
   text-align: center;
-  letter-spacing: normal;
-  color: #4A4A4A;
+  letter-spacing: 1px;
+  line-height: 1.4;
 }
 
 .flfooter {
@@ -159,37 +161,33 @@ p a:hover {
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
-  letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
   background-color: #5AADFF;
   min-height: 100px;
   color: white;
   font-size: 100%;
-  letter-spacing: 4px;
-  /*margin-top: -1.0em;*/
+  letter-spacing: 1px;
+  margin-top: -20px;
 }
 
 .social {
-  padding-top: 3em;
-  padding-bottom: 2.5em;
+  margin-bottom: 1em;
 }
 
-.social a {
+.social p a {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  letter-spacing: 0em;
-  word-spacing: 0em;
   line-height: 1.4;
   color: #4A4A4A;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .social a:hover {
   color: white;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .social, .container-full :hover {
@@ -220,6 +218,7 @@ p a:hover {
   height: 75px;
   line-height: 1.1em;
   padding: 0.25em;
+  overflow: hidden;
 }
 
 .artist-container {

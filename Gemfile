@@ -22,7 +22,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
-# Adding itunes Search API gem
+# Adding iTunes Search API gem
 gem 'itunes-search-api'
 
 # Use jquery as the JavaScript library
@@ -55,3 +55,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'rails_12factor'
+
+gem 'rails_12factor', group: :production

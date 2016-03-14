@@ -11,14 +11,12 @@
       <p class="artist-title"><%= @artist.name %></p>
 
       <% if current_fan %>
-        <% if current_fan.luvs?(@artist)%>
+        <% if current_fan.luvs?(@artist) %>
           <%= render 'unluv_form' %>
         <% else %>
           <%= render 'luv_form' %>
         <%end%>
       <%end%>
-
-
 
       <p class="artist-description"><%= @artist.description %></p>
 

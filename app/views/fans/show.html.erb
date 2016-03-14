@@ -10,12 +10,38 @@
       <div class="artist-title">
         <%= @fan.name %>
         <% if current_fan == @fan %>
-          <%= link_to 'Edit my profile', edit_fan_path(@fan), :class => "edit-my-profile" %> <br>
-          <%= link_to 'My Shopping Cart', cart_path, :class => "edit-my-profile" %>
+          <%= link_to 'Edit my profile', edit_fan_path(@fan), :class => "profile-edit", :style => "float:right" %> <br>
+          <%= link_to 'My Shopping Cart', cart_path, :class => "profile-edit", :style => "float:right" %>
           <br>
-          <%= link_to 'Delete', @fan, :class => "edit-my-profile", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete my account', @fan, :class => "profile-edit", :style => "float:right", method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
       </div>
+
+      <% unless @fan.location == "" %>
+        <p class="profile-subhead">Location</p><br>
+        <p class="profile-copy"><%= @fan.location %></p><br>
+      <% end %>
+
+      <% unless @fan.facebook == "" %>
+        <p class="profile-subhead">Facebook</p><br>
+        <%= link_to "#{@fan.facebook}", "#{@fan.facebook}", :class => "profile-copy" %><br><br>
+      <% end %>
+
+      <% unless @fan.twitter == "" %>
+        <p class="profile-subhead">Twitter</p><br>
+        <%= link_to "#{@fan.twitter}", "#{@fan.twitter}", :class => "profile-copy" %><br><br>
+      <% end %>
+
+      <% unless @fan.lastfm == "" %>
+        <p class="profile-subhead">LastFM</p><br>
+        <%= link_to "#{@fan.lastfm}", "#{@fan.lastfm}", :class => "profile-copy" %><br><br>
+      <% end %>
+
+      <% unless @fan.bio == "" %>
+        <p class="profile-subhead">Bio</p><br>
+        <p class="profile-copy"><%= @fan.bio %></p><br>
+      <% end %>
+
     </div>
   </div>
 </div>

@@ -51,7 +51,7 @@ class FansController < ApplicationController
    def fan_params
      params.
      require(:fan).
-     permit(:name, :email, :password, :password_conation, :image_url)
+     permit(:name, :email, :password, :password_conation, :image_url, :bio, :location, :facebook, :twitter, :lastfm)
    end
 
 end

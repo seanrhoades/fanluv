@@ -8,11 +8,12 @@ class LuvsController < ApplicationController
   end
 
   def destroy
-    @artist = Artist.find(params[:luv][:luv])
-    fan_id = params[:luv][:luvs]
-    current_fan.destroy_luv(@artist, fan_id)
-
-    redirect_to artist_path(@artist)
+    # @artist = Artist.find(params[:luv][:luv])
+    # fan_id = params[:luv][:luvs]
+    # current_fan.destroy_luv(@artist, fan_id)
+    luve = Luv.find(params[:id])
+      luve.destroy
+    redirect_to luve.artist
   end
 
   def show

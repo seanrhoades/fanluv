@@ -1,1 +1,4 @@
-<%= " ⃠" %>
+<%= form_for(current_fan.luvs.find_by(artist_id: @current_fan),
+ 		html: { method: :delete }) do |f| %>
+<%= f.submit "THANK YOU  ♥", class: "btn" %>
+<% end %>

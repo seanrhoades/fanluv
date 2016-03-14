@@ -18,6 +18,14 @@ class LuvsController < ApplicationController
   def show
   end
 
+  private
+
+  def luv_params
+    params.
+    require(:luv).
+    permit(:fan_id, :artist_id)
+  end
+
 
 
 end

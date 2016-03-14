@@ -19,12 +19,13 @@ class Fan < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 
-def create_luv(artist, fan)
-  Luv.create(artist_id: artist.id, fan_id: fan)
-end
+  def create_luv(artist, fan)
+    Luv.create(artist_id: artist.id, fan_id: fan)
+  end
 
-def destroy_luv(artist, fan)
-  Luv.destroy(artist_id: artist.id, fan_id: fan)
-end
+  def destroy_luv(artist, fan)
+    Luv.destroy(artist_id: artist.id, fan_id: fan)
+  end
+
 
 end

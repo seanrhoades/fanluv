@@ -21,6 +21,7 @@ gem 'seed_dump'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem "animate-rails"
 
 # Adding iTunes Search API gem
 gem 'itunes-search-api'
@@ -55,7 +56,5 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-gem 'rails_12factor'
 
 gem 'rails_12factor', group: :production

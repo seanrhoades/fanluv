@@ -108,8 +108,19 @@ p a:hover {
   white-space: nowrap;
 }
 
-.container-full.subhead-home {
+.container-full.subhead-home-1 {
   margin-top: -2.5em;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  color: white;
+  padding: 2em;
+  background-color: #5AADFF;
+  text-align: center;
+}
+
+.container-full.subhead-home {
+  margin-top: -1.5em;
   height: 100px;
   line-height: 100px;
   width: 100%;
@@ -326,6 +337,24 @@ a.artist-name:hover {
   max-width: 100%;
   height: auto;
   margin: 0;
+}
+
+.img-100 {
+  display: inline;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  height: 100px;
+}
+
+.cart-product-title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: black;
+  display:inline;
 }
 
 .tourcity {

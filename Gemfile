@@ -22,7 +22,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem "animate-rails"
-
+gem 'httparty'
 # Adding iTunes Search API gem
 gem 'itunes-search-api'
 

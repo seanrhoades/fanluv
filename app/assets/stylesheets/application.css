@@ -437,9 +437,7 @@ p.venue a {
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  line-height: 1.4;
   color: black;
-  line-height: 2;
   margin: 1em;
 }
 
@@ -448,9 +446,12 @@ p.venue a {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
+  margin-left: 0.25em;
+  color: #5AADFF;
   line-height: 1.4;
-  line-height: 2;
-  margin: 0.25em;
+}
+
+a.merch-title:visited {
   color: #5AADFF;
 }
 

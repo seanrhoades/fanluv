@@ -1,48 +1,62 @@
-<h1>Your Cart</h1>
-
-<% if @cart.empty? %>
-	<p>Your cart is currently empty</p>
-<% else %>
-  <%= link_to "Empty Cart", cart_clear_path %>
-<% end %>
-<br><br><br>
-
-<% total = 0 %>
-
-<% @cart.each do | id, quantity | %>
-  <% product = Product.find_by_id(id) %>
-	<% next if product.nil? %>
+<p id="notice"><%= notice %></p>
 
 <div class="container-fluid">
   <div class="row">
-		  <div class="col-md-3">
-<%= image_tag product.image_url %>
-<ul><li><%= product.description %></li>
-    <li><%= number_to_currency(product.price, :unit => '$') %></li>
-    <li>Quantity: <%= quantity%></li>
-  <% total += quantity * product.price %>
-</ul>
-</div>
-</div>
-</div>
 
-<% end %>
+    <div class="col-xs-12 col-md-6">
 
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span><p><b><%= number_to_currency(total, :unit => '$') %></b></p></span>
-    </label>
-  </article>
+			<h1>Your Cart</h1>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="PURCHASE YOUR MERCH"
-          data-amount=""
-          data-locale="auto"></script>
-<% end %>
+			<% if @cart.empty? %>
+				<p>Your cart is currently empty</p>
+			<% else %>
+			  <%= link_to "Empty Cart", cart_clear_path %>
+			<% end %>
+
+			<br><br><br>
+
+			<% total = 0 %>
+
+			<% @cart.each do | id, quantity | %>
+			<% product = Product.find_by_id(id) %>
+			<% next if product.nil? %>
+
+			<div class="container-fluid">
+			  <div class="row">
+					<div class="col-md-3">
+
+								<%= image_tag product.image_url, :class => "img-100" %>
+
+								<%= product.title %><br>
+							  <%= number_to_currency(product.price, :unit => '$') %><br>
+							  Quantity: <%= quantity%><br>
+
+							  <% total += quantity * product.price %>
+
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<%= form_tag charges_path do %>
+			  <article>
+			    <% if flash[:error].present? %>
+			      <div id="error_explanation">
+			        <p><%= flash[:error] %></p>
+			      </div>
+			    <% end %>
+			    <label class="amount">
+			      <span><p><b><%= number_to_currency(total, :unit => '$') %></b></p></span>
+			    </label>
+			  </article>
+
+			  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+			          data-description="PURCHASE YOUR MERCH"
+			          data-amount=""
+			          data-locale="auto"></script>
+			<% end %>
+
+		</div>
+	</div>
+</div>

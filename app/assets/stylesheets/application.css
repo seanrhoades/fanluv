@@ -218,7 +218,7 @@ a.brand {
   width: 100%;
   height: 75px;
   line-height: 1.1em;
-  padding: 0.25em;
+  padding: 0.25em;rail
   overflow: hidden;
 }
 
@@ -244,18 +244,58 @@ a.brand {
   line-height: 1.1em;
 }
 
-.edit-my-profile {
+.profile-subhead {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1.1em;
+}
+
+a.profile-edit {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 1.1em;
+  color: #5AADFF;
+}
+
+a.profile-edit:hover, a.profile-subhead:hover {
+  color: #5AADFF;
+  text-decoration: underline;
+  background-color: inherit;
+}
+
+.profile-copy {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
-  display: inline-block;
-  line-height: 1.1em;
-  float:right;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+  padding-bottom: 1em;
+  color: black;
+}
+
+a.profile-copy {
+  background-color: inherit;
+  color: #5AADFF;
+  text-decoration: none;
+}
+
+a.profile-copy:hover {
+  background-color: inherit;
+  color: #5AADFF;
+  text-decoration: underline;
 }
 
 a.artist-name {
   color: white;
+  overflow:hidden;
 }
 
 a.artist-name:hover {
@@ -284,7 +324,6 @@ a.artist-name:hover {
   padding-bottom: 1em;
   color: black;
   display:block;
-  /*padding: 15px;*/
 }
 
 .btn.luv_btn {
@@ -406,7 +445,6 @@ p.filterby {
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
-  color: #505050;
 }
 
 .note_rm {
@@ -444,7 +482,9 @@ a.note_rm {
 }
 
 .btn a:focus,
-.btn a:hover {
+.btn a:hover,
+a.btn.btn-more-artists:hover,
+a.btn-more:hover {
   background-color: #eee;
   color: black;
   text-decoration: none;
@@ -475,16 +515,7 @@ input.btn:hover {
   text-decoration: none;
 }
 
-.btn-more {
-  background-color: #4A4A4A;
-  border-radius: 0;
-  border: none;
-  margin-top: 1em;
-  padding: 20px;
-  text-align: center;
-}
-
-.btn-more-artists {
+a.btn-more-artists {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -509,6 +540,22 @@ input.btn:hover {
   color: white;
 }
 
+.btn-more {
+  width: 100%;
+}
+
+p.btn-more {
+  width: 100%;
+  background-color: #4A4A4A;
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+p.btn-more a {
+  color: white;
+}
+
 p.btn-more {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -521,28 +568,11 @@ p.btn-more {
   text-transform: uppercase;
 }
 
-a.btn-more {
+ul.news {
+  margin: 0px;
+  line-height: 1.5;
   font-family: 'Roboto', sans-serif;
-  font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 0em;
-  word-spacing: 0em;
-  line-height: 1.4;
-  color: white;
-  text-transform: uppercase;
-}
-
-p.btn-more a {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 0em;
-  word-spacing: 0em;
-  line-height: 1.4;
-  color: white;
-  text-transform: uppercase;
 }
 
 #map {

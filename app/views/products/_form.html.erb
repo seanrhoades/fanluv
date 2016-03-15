@@ -1,37 +1,81 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<div class="container-fluid">
+  <div class="row">
 
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <%= form_for(@product) do |f| %>
+      <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+          <% @product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+      <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+        <h1>Add a Product</h1>
+        <hr>
+      </div>
+
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :title %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.text_field :title, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :description %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.text_area :description, :class => "form-control", :style => "height: 200px" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :image_url %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.text_field :image_url, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :price %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.number_field :price, :class => "form-control", :step => 0.01 %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-4 control-label">
+            <%= f.label :category %>
+          </div>
+          <div class="col-xs-8" style="margin-bottom:1em;">
+            <%= f.text_field :category, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="text-right" style="margin:1em;">
+          <%= f.submit "Create my account", class: "btn" %>
+        </div>
+
+      </div>
+
+    <% end %>
+
+    <br>
+    <br>
+
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

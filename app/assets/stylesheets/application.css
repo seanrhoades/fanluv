@@ -130,6 +130,12 @@ a.brand {
   color: #4A4A4A;
 }
 
+.brand a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: inherit;
+}
+
 .footer-mid {
   font-size: 14px;
   line-height: 1.4;
@@ -172,6 +178,7 @@ a.brand {
 .social a:hover {
   color: white;
   text-decoration: none;
+  background-color: inherit;
 }
 
 .force-to-bottom {

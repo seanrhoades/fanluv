@@ -80,8 +80,9 @@
         var map;
         function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 42.361239, lng: -83.06701},
-            zoom: 8
+            center: {lat: <%= @json['response'].first[1][0]['venue']['location']['latitude'] %>, lng: <%= @json['response'].first[1][0]['venue']['location']['longitude'] %>
+},
+            zoom: 11
           });
         }
       </script>
@@ -89,8 +90,7 @@
 
     <div class="col-xs-12 col-md-4" style="margin-top:1em;">
       <h3>Upcoming Tour Stops</h3>
-      <hr>
-      <% @json['response']['gigs'].each do |x| %>
+      <hr><% @json['response']['gigs'].each do |x| %>
       <p><span class="tourcity"><%= x["venue"]["location"]["city"] %> </span><span class="venue"><%= x["venue"]["name"] %></span><span class="tourdates"> / <%= x["startDate"].to_time.strftime("%b %d")%></span></p>
 
       <!-- <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a -->

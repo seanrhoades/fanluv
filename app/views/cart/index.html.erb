@@ -9,20 +9,22 @@
 
 <% total = 0 %>
 
-<ul>
 <% @cart.each do | id, quantity | %>
   <% product = Product.find_by_id(id) %>
 	<% next if product.nil? %>
-  <li>
-    <%= link_to product %>
-    <p><%= product.description %></p>
-    <p><%= number_to_currency(product.price, :unit => '$') %></p>
-    <p>Quantity: <%= quantity%></p>
-  </li>
+
+<div class="container-fluid">
+  <div class="row">
+		  <div class="col-md-3">
+<%= image_tag product.image_url %>
+<ul><li><%= product.description %></li>
+    <li><%= number_to_currency(product.price, :unit => '$') %></li>
+    <li>Quantity: <%= quantity%></li>
   <% total += quantity * product.price %>
-<% end %>
-
-<p><b><%= number_to_currency(total, :unit => '$') %></b></p>
 </ul>
-
+</div>
+</div>
+</div>
+<p><b><%= number_to_currency(total, :unit => '$') %></b></p>
+<% end %>
 <%= image_tag("checkout-logo-medium.png")%>

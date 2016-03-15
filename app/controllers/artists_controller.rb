@@ -36,7 +36,7 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params[:id])
-    @products = Product.all # Fix??
+    @products = @artist.products # Fix??
   end
 
   def destroy

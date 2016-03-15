@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   resources :products
-
+  resources :charges
+  
   get '/cart' => 'cart#index'
   get '/cart/clear' => 'cart#clearCart'
   get '/cart/:id' => 'cart#add'

@@ -24,7 +24,8 @@
           <ul class="nav navright">
 
             <% if current_fan || current_artist %>
-            <li><%= link_to "Log Out", logout_path, method: :delete, class: 'btn' %></li>
+              <li><%= link_to "Profile", fan_path(current_fan), class: 'btn-loggedin' %></li>
+              <li><%= link_to "Log Out", logout_path, method: :delete, class: 'btn-loggedin' %></li>
             <% else %>
             <li><%= link_to "Log In | Sign up", login_path, class: 'btn' %></li>
             <% end %>

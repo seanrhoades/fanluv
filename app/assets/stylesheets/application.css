@@ -247,10 +247,11 @@ a.brand {
 .profile-subhead {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
+  font-weight: 400;
+  font-size: 18px;
   display: inline-block;
-  line-height: 1.1em;
+  line-height: 1.6em;
+  margin-top: 1em;
 }
 
 a.profile-edit {
@@ -359,6 +360,7 @@ a.artist-name:hover {
   font-size: 14px;
   text-transform: none;
   text-decoration: none;
+  line-height: 1.4;
   color: black;
 }
 
@@ -467,9 +469,18 @@ a.note_rm {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
-  letter-spacing: 0em;
-  word-spacing: 0em;
-  line-height: 1.4;
+  color: white;
+  text-transform: uppercase;
+  background-color: #4A4A4A;
+  border-radius: 0;
+  border: none;
+}
+
+.btn-loggedin {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
   color: white;
   text-transform: uppercase;
   background-color: #4A4A4A;

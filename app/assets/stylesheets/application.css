@@ -347,6 +347,28 @@ a.artist-name:hover {
   height: 100px;
 }
 
+img.img-200 {
+  display: inline;
+  max-width: 100%;
+  margin: 0;
+  height: 200px;
+  text-align: center;
+  margin: 1em;
+  overflow:hidden;
+  text-decoration: none;
+
+}
+
+img.img-200:hover {
+  /*color: inherit;*/
+  /*text-decoration: none;*/
+  /*background-color: inherit;*/
+}
+
+/*.img-200:hover{
+  background-color: red;
+}*/
+
 .cart-product-title {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -408,6 +430,38 @@ p.venue a {
 
 .merch p a {
   color: #5AADFF;
+}
+
+.merch-price {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.4;
+  color: black;
+  line-height: 2;
+  margin: 1em;
+}
+
+.merch-title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.4;
+  line-height: 2;
+  margin: 0.25em;
+  color: #5AADFF;
+}
+
+a.merch-title:hover {
+  color: #5AADFF;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+a:hover {
+  background-color: inherit;
 }
 
 p.filterby {

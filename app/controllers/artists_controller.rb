@@ -4,6 +4,8 @@ class ArtistsController < ApplicationController
     @artists = Artist.all
   end
 
+
+
   def new
     @artist = Artist.new
   end
@@ -36,7 +38,12 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params[:id])
-    @products = @artist.products # Fix??
+    # @products = @artist.products # Fix??
+    artist = @artist.name
+    artist = artist.gsub(" ","+")
+    @response = HTTParty.get('http://www.nvivo.es/api/request.php?api_key=1e1016186e762e58b7d31801536c4694&method=artist.getEvents&artist='+artist+'&country_iso=us&format=json')
+    @json = JSON.parse(@response.body).with_indifferent_access
+    p @json
   end
 
   def destroy

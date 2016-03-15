@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
    def destroy
      session[:artist_id] = nil
      session[:fan_id] = nil
-     redirect_to '/'
+     redirect_to login_path
    end
 
 

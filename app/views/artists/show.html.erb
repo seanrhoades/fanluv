@@ -70,13 +70,11 @@
     <h2>TOUR DATES</h2>
   </div>
 </div>
-
+<% if @json['response']['gigs'] == [] %>
+<h3 class="text-center" style="margin-top: 1em">This artist currently has no tour dates.</h3>
+<% else %>
 <div class="container-fluid">
   <div class="row">
-
-    <% if @json['response']['gigs'] == [] %>
-    <h3 class="text-center" style="margin-top: 1em">This artist currently has no tour dates.</h3>
-    <% else %>
     <div class="col-xs-12 col-md-4">
       <div id="map"></div>
       <script>
@@ -90,7 +88,6 @@
         }
       </script>
     </div>
-
     <div class="col-xs-12 col-md-4" style="margin-top:1em;">
       <h3>Upcoming Tour Stops</h3>
       <hr><% @json['response']['gigs'].each do |x| %>
@@ -99,17 +96,25 @@
       <!-- <p class="venue">Barclaycard Arena | <a href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a -->
         <% end %>
     </div>
-<% end %>
 
-<% if @json['response']['gigs'] == [] %>
+<% if @json['response']['gigs'].first['tickets_url'] == nil %>
 <div class="col-xs-12 col-md-4" style="margin-top:1em;">
-<br></div>
+  <h4 class="text-center" style="margin-top: 1em">Tickets for the next upcoming show are not available online. Please check with the venue for ticket sales.</h4>
+  <h4 class="text-center" style="margin-top:3em">Want to go a show, but don't have any friends to go with? Find some from our partners at AmpedUp!</h4><br>
+  <a href="https://www.amped-up.co" target="_blank"><img src="https://dl.dropboxusercontent.com/u/36209109/fanluv/ampedup.png" style="max-width:100%; max-height:100%;"></a>
+</div>
 <% else %>
     <div class="col-xs-12 col-md-4" style="margin-top:1em;">
-     <a class="btn ticket-btn" href="http://www.ticketmaster.com/rihanna-anti-world-tour-2016-miami-florida-03-15-2016/event/0D004F74E49DBB97?ac_link=tmplus_merch_sitespotlight_LSC_GTVopp&pageType=home&spotlight=1%7C1317303&spotlight_ren_od=1&tm_link=tm_homeA_4_f1">Find Tickets <i class="fa fa-ticket"></i></a>
+      <% @linky = (@json['response']['gigs'].first['tickets_url']) %>
+      <%= link_to "Find Tickets", @linky, class: "btn ticket-btn", target: "_blank" %>
+      <h4 class="text-center" style="margin-top:3em">Want to go this show, but don't have any friends to go with? Find some from our partners at AmpedUp!</h4>
+      <a href="https://www.amped-up.co" target="_blank"><img src="https://dl.dropboxusercontent.com/u/36209109/fanluv/ampedup.png" style="max-width:100%; max-height:100%;"></a>
 
     </div>
 <% end %>
+<% end %>
+
+
 
   </div>
 </div>
@@ -151,7 +156,6 @@
       <div class="note">
 
         <h4>New exclusive merchandise in the store:</h4>
-        <p>There's some new merch in the store for our best fans, check out what we've got:</p>
         <ul class="news">
           <li>A Super Awesome Shirt</li>
           <li>Limited Edition Red Vinyl</li>
@@ -168,18 +172,7 @@
     <div class="col-xs-6 col-md-3">
       <div class="note">
 
-        <h4>Brunch aesthetic next level banjo</h4>
-        <p>Aesthetic bitters sustainable green juice. Artisan kogi vinyl banjo quinoa forage franzen kinfolk ethical try-hard, you probably haven't heard of them put a bird on it gastropub before they sold out. </p>
-
-        <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
-
-      </div>
-    </div>
-
-    <div class="col-xs-6 col-md-3">
-      <div class="note">
-
-        <h4>Messenger bag umami crucifix biodiesel</h4>
+        <h4>Notes from the road:</h4>
         <p>Four dollar toast disrupt cold-pressed bespoke. Gochujang franzen tilde, gluten-free pop-up food truck sustainable asymmetrical shoreditch lo-fi try-hard trust fund biodiesel church-key raw denim. Meh beard jean shorts, gastropub quinoa viral heirloom.</p>
 
         <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
@@ -190,13 +183,25 @@
     <div class="col-xs-6 col-md-3">
       <div class="note">
 
-        <h4>Keytar four loko tofu </h4>
+        <h4>Pitchfork reviews our latest album:</h4>
         <p>Celiac cronut tattooed selfies, gastropub photo booth fashion axe forage tacos gentrify tote bag ramps chia. Venmo intelligentsia street art taxidermy, readymade health goth microdosing plaid forage cliche.</p>
 
         <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
 
       </div>
     </div>
+
+    <div class="col-xs-6 col-md-3">
+      <div class="note">
+
+        <h4>Exclusive pre-sale show tickets for our FanLUV fans coming soon:</h4>
+        <p>Aesthetic bitters sustainable green juice. Artisan kogi vinyl banjo quinoa forage franzen kinfolk ethical try-hard, you probably haven't heard of them put a bird on it gastropub before they sold out. </p>
+
+        <p><a class="note_rm" href="#">Read more <i class="fa fa-caret-right"></i></a></p>
+
+      </div>
+    </div>
+
   </div>
 
   <p class="btn-more"><a href="#">MORE <i class="fa fa-chevron-circle-down"></i></a></p>

@@ -1,33 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<div class="container" style="margin-bottom: 3em">
+  <h2><%= @product.title %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Image:</th>
+        <th>Description:</th>
+        <th>Price:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= image_tag(@product.image_url, style: "max-height: 250px") %></td>
+        <td><%= @product.description %></td>
+        <td><strong>$<%= @product.price %>.00</strong></td>
+      </tr>
+    </tbody>
+  </table>
 
-<p>
-  <%= image_tag(@product.image_url) %>
-</p>
+  <span class="pull-right">
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <% if current_fan %>
+  <h3><a href="/cart/<%= @product.id %>"> Add to cart</a></h3>
+  <% end %>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+  <% if current_artist %>
+  <h3><%= link_to 'Edit', edit_product_path(@product) %></h3>
+  <% end %>
 
-<% if current_fan %>
-<a href="/cart/<%= @product.id %>"> Add to cart </a>
-<% end %>
+</span>
 
-<% if current_artist %>
-<%= link_to 'Edit', edit_product_path(@product) %>
-<% end %>
+</div>

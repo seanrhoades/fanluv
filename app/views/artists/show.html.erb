@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <p class="btn-more"><a href="#">MORE <i class="fa fa-caret-square-o-right"></i></a></p>
+  <p class="btn-more"><%= link_to "MORE", ItunesSearchController.search(@artist.name) %><i class="fa fa-caret-square-o-right"></i></p>
 
 </div>
 
@@ -99,7 +99,7 @@
   <div class="col-xs-12 col-md-4" style="margin-top:1em;">
     <h4 class="text-center" style="margin-top: 1em">Tickets for the next upcoming show are not available online. Please check with the venue for ticket sales.</h4>
     <h4 class="text-center" style="margin-top:3em">Want to go a show, but don't have any friends to go with? Find some from our partners at AmpedUp!</h4><br>
-    <a href="https://www.amped-up.co" target="_blank"><img src="https://dl.dropboxusercontent.com/u/36209109/fanluv/ampedup.png" style="max-width:100%; max-height:100%;"></a>
+    <a href="http://www.amped-up.co" target="_blank"><img src="https://dl.dropboxusercontent.com/u/36209109/fanluv/ampedup.png" style="max-width:100%; max-height:100%;"></a>
   </div>
 
   <% else %>
@@ -107,7 +107,7 @@
       <% @linky = (@json['response']['gigs'].first['tickets_url']) %>
       <%= link_to "Find Tickets", @linky, class: "btn ticket-btn", target: "_blank" %>
       <h4 class="text-center" style="margin-top:3em">Want to go this show, but don't have any friends to go with? Find some from our partners at AmpedUp!</h4>
-      <a href="https://www.amped-up.co" target="_blank"><img src="https://dl.dropboxusercontent.com/u/36209109/fanluv/ampedup.png" style="max-width:100%; max-height:100%;"></a>
+      <a href="http://www.amped-up.co" target="_blank"><img src="https://dl.dropboxusercontent.com/u/36209109/fanluv/ampedup.png" style="max-width:100%; max-height:100%;"></a>
       </div>
   <% end %>
 

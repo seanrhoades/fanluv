@@ -58,6 +58,4 @@ group :development do
   gem 'spring'
 end
 
-gem 'puma'
-
 gem 'rails_12factor', group: :production
